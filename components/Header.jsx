@@ -20,8 +20,8 @@ export default function Header() {
                   d="M5 6h14M5 12h14M5 18h14"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
                 ></path>
               </svg>
             </button>
