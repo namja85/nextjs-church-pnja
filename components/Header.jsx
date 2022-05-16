@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <div className="sticky top-0 w-full border-b border-slate-50/[0.06] backdrop-blur">
+    <header className="sticky top-0 w-full border-b border-slate-50/[0.06] backdrop-blur">
       <div className="max-w-7xl mx-auto">
         <div className="mx-4 py-4 flex justify-between items-center">
           <Link href={'/'}>
@@ -26,6 +26,6 @@ export default function Header() {
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 }
