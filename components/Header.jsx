@@ -7,7 +7,9 @@ export default function Header() {
         <div className="mx-4 py-4 flex justify-between items-center">
           <Link href={'/'}>
             <a>
-              <h1 className="text-slate-200 font-bold text-3xl">PNJA C.</h1>
+              <h1 className="text-slate-200 font-bold text-3xl">
+                평내중앙교회
+              </h1>
             </a>
           </Link>
           <div>
