@@ -1,15 +1,14 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Header() {
   return (
     <header className="sticky top-0 w-full border-b border-slate-50/[0.06] backdrop-blur">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-lg mx-auto">
         <div className="mx-4 py-4 flex justify-between items-center">
-          <Link href={'/'}>
+          <Link className="cursor-pointer" href={'/'}>
             <a>
-              <h1 className="text-slate-200 font-bold text-3xl">
-                평내중앙교회
-              </h1>
+              <img className="h-8" src="/logo.png" alt="평내중앙교회로고" />
             </a>
           </Link>
           <div>
