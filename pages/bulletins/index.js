@@ -3,10 +3,10 @@ import { ko } from 'date-fns/locale';
 import WorshipContentBox from '../../components/WorshipContentBox';
 import worships from '../../posts/bulletins/_2221';
 
-export default function index() {
+export default function Bulletins() {
   const { main, praise, wed } = worships;
   return (
-    <div className="flex flex-col space-y-8 pt-4 pb-4">
+    <div className="container flex flex-col space-y-8 p-4">
       <p className="text-right">
         <small>{format(main.시간, 'PPPP', { locale: ko })}</small>
       </p>

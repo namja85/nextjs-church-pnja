@@ -5,7 +5,7 @@ import Footer from './Footer';
 
 export default function Layout({ children }) {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen min-w-[430px]">
       <Head>
         <title>평내중앙교회</title>
         <meta
