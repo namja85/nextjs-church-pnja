@@ -17,7 +17,7 @@ export default function Home() {
             </Button>
           </a>
         </Link>
-        <Link href="/bulletins">
+        <Link href="/bibles">
           <a>
             <Button outlined>
               <span>성경</span>
