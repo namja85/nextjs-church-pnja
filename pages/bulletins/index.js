@@ -1,7 +1,7 @@
 import { format } from 'date-fns';
 import { ko } from 'date-fns/locale';
 import WorshipContentBox from '../../components/WorshipContentBox';
-import worships from '../../posts/bulletins/_2222';
+import worships from '../../posts/bulletins/_2223';
 
 export default function Bulletins() {
   const { main, praise, wed } = worships;
