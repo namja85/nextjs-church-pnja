@@ -7,6 +7,8 @@ import {
 const date = new Date('2022/06/05');
 
 const worships = {
+  imageUrl:
+    'https://drive.google.com/file/d/1G0C7RnJVWu5-J9xmKQEdMKS7E1e6cJL0/view',
   main: {
     제목: '주일낮예배',
     구절: '하나님은 영이시니 예배하는 자가 신령과 진정으로 예배할지니라 (요 4:24)',
