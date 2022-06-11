@@ -2,7 +2,7 @@ import { format } from 'date-fns';
 import { ko } from 'date-fns/locale';
 import ExternalLinkIcon from '../../components/ExternalLinkIcon';
 import WorshipContentBox from '../../components/WorshipContentBox';
-import worships from '../../posts/bulletins/_2223';
+import worships from '../../posts/bulletins/_2224';
 
 export default function Bulletins() {
   const { main, praise, wed } = worships;
