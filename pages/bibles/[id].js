@@ -2,7 +2,7 @@ import { getBibleContent, getBibleIds } from '../../libs/bibles';
 
 export default function Bible({ id, content }) {
   return (
-    <article className="prose prose-invert container p-4">
+    <article className="prose prose-invert container p-4 mx-auto">
       <div dangerouslySetInnerHTML={{ __html: content }}></div>
     </article>
   );
