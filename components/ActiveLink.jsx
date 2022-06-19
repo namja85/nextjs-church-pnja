@@ -5,7 +5,6 @@ import cn from 'classnames';
 export default function ActiveLink({ children, href }) {
   const router = useRouter();
   const active = router.asPath === href;
-  console.log(router, active);
 
   return (
     <Link href={href}>
