@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <footer className=" border-t border-slate-50/[0.06] py-10 px-4">
-      <div className="max-w-lg mx-auto flex justify-between items-center">
+    <footer className="border-t border-slate-50/[0.06] py-10 px-4">
+      <div className="max-w-lg mx-auto flex justify-between items-center lg:max-w-5xl">
         <div>
           <p>
             <small>(12223) 경기도 남양주시 평내로29번길 51-30</small>

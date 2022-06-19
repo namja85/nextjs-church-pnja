@@ -18,7 +18,7 @@ export default function Introduce() {
     },
   ];
   return (
-    <div className="flex flex-col space-y-8 mb-16">
+    <div className="flex flex-col space-y-8 mb-16 lg:flex-row lg:space-y-0 lg:space-x-8">
       {introduces.length > 0 &&
         introduces.map(({ id, ...props }, index) => (
           <IntroCard {...props} key={id} />

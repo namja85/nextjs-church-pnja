@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function IntroCard({ name, imgPath, text, bibleNum }) {
   return (
-    <div className="relative rounded-lg text-slate-300">
+    <div className="relative rounded-lg text-slate-300 lg:flex-1">
       <div className="flex p-4 rounded-lg overflow-hidden bg-slate-800 ring-1 ring-slate-700">
         {/* <div className="w-32 -m-4 mr-4 h-auto overflow-hidden">
           <img className="object-cover" src={imgPath} alt={name} />
