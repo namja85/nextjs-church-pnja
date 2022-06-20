@@ -1,7 +1,7 @@
 export default function Hero({ children }) {
   return (
     <div className="pt-16 pb-32 px-16 lg:pt-32 lg:pb-48 lg:px-4">
-      <h1 className="flex flex-col items-center space-y-4 text-slate-100 font-extrabold text-4xl lg:text-5xl lg:flex-row lg:space-y-0 lg:space-x-4">
+      <h1 className="flex flex-col items-center space-y-4 text-slate-100 font-extrabold text-4xl lg:flex-row lg:space-y-0 lg:space-x-4 lg:justify-center">
         <span>
           <span className="font-bold text-sky-400 lg:text-6xl">축제</span>가
           있는 교회,
