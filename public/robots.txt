@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.pnja.or.kr/sitemap.xml
