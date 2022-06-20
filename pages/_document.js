@@ -10,8 +10,8 @@ export default function Document() {
 
         <meta property="og:type" content="website"></meta>
         <meta property="og:title" content="평내중앙교회"></meta>
-        <meta property="og:description" content="평내중앙교회 홈페이지에 오신 것을 환영합니다."></meta>
-        <meta property="og:image" content="https://www.pnja.or.kr/pnja-church-color.png"></meta>
+        <meta property="og:description" content="평내중앙교회에 오신 것을 환영합니다."></meta>
+        <meta property="og:image" content="https://www.pnja.or.kr/logo.png"></meta>
         <meta property="og:url" content="https://www.pnja.or.kr"></meta>
       </Head>
       <body className="antialiased bg-slate-900 text-slate-400">
