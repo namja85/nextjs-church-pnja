@@ -23,6 +23,7 @@ export default function WayToCome() {
         <title>평내중앙교회 | 오시는 길</title>
 
         <script
+          defer
           src={`https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${process.env.NEXT_PUBLIC_MAP_KEY}`}
         ></script>
       </Head>
