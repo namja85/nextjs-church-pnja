@@ -31,7 +31,7 @@ export default function WayToCome() {
       <div>
         <h1>위치</h1>
         <p>(12223) 경기도 남양주시 평내로29번길 51-30</p>
-        <div id="map" className="w-full h-96 bg-pink-200"></div>
+        <div id="map" className="w-full h-96 bg-pink-300"></div>
       </div>
       <div className="mt-4">
         <h3>오시는 방법</h3>
