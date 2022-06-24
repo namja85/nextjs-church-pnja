@@ -50,9 +50,9 @@ export default function Header() {
                 <li>
                   <ActiveLink href="/bibles">성경</ActiveLink>
                 </li>
-                <li>
+                {/* <li>
                   <ActiveLink href="/way-to-come">오시는 길</ActiveLink>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
@@ -87,14 +87,14 @@ export default function Header() {
                   성경
                 </button>
               </li>
-              <li>
+              {/* <li>
                 <button
                   className="w-full px-8 py-2 hover:text-white"
                   data-path="/way-to-come"
                 >
                   오시는 길
                 </button>
-              </li>
+              </li> */}
             </ul>
             <div className="mt-4 text-right">
               <img
