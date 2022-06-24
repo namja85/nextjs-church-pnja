@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { useRef, useEffect } from 'react';
+import { useEffect } from 'react';
 
 const church = {
   lat: 37.647,
@@ -7,17 +7,15 @@ const church = {
 };
 
 export default function WayToCome() {
-  const mapRef = useRef(null);
-
   useEffect(() => {
-    mapRef.current = new naver.maps.Map('map', {
+    const map = new naver.maps.Map('map', {
       center: new naver.maps.LatLng(church.lat, church.lng),
       zoom: 19,
       zoomControl: true,
     });
     new naver.maps.Marker({
       position: new naver.maps.LatLng(church.lat, church.lng),
-      map: mapRef.current,
+      map,
     });
   }, []);
 
@@ -25,11 +23,6 @@ export default function WayToCome() {
     <div className="container p-4">
       <Head>
         <title>평내중앙교회 | 오시는 길</title>
-
-        <script
-          defer
-          src={`https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${process.env.NEXT_PUBLIC_MAP_KEY}`}
-        ></script>
       </Head>
 
       <div className="mt-8">

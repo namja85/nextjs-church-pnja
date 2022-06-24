@@ -6,6 +6,12 @@ import MenuIcon from './MenuIcon';
 import CloseIcon from './CloseIcon';
 import ActiveLink from './ActiveLink';
 
+const routes = [
+  { id: 1, name: '주보', path: '/bulletins' },
+  { id: 2, name: '성경', path: '/bibles' },
+  { id: 3, name: '오시는 길', path: '/way-to-come' },
+];
+
 export default function Header() {
   const [open, setOpen] = useState(false);
   const router = useRouter();
@@ -44,15 +50,12 @@ export default function Header() {
             </div>
             <div className="hidden lg:block">
               <ul className="flex space-x-2">
-                <li>
-                  <ActiveLink href="/bulletins">주보</ActiveLink>
-                </li>
-                <li>
-                  <ActiveLink href="/bibles">성경</ActiveLink>
-                </li>
-                {/* <li>
-                  <ActiveLink href="/way-to-come">오시는 길</ActiveLink>
-                </li> */}
+                {routes.length > 0 &&
+                  routes.map((route) => (
+                    <li key={route.id}>
+                      <ActiveLink href={route.path}>{route.name}</ActiveLink>
+                    </li>
+                  ))}
               </ul>
             </div>
           </div>
@@ -71,30 +74,17 @@ export default function Header() {
               </button>
             </div>
             <ul className="text-center space-y-8 pt-4" onClick={handleNavgate}>
-              <li>
-                <button
-                  className="w-full px-8 py-2 hover:text-white"
-                  data-path="/bulletins"
-                >
-                  주보
-                </button>
-              </li>
-              <li>
-                <button
-                  className="w-full px-8 py-2 hover:text-white"
-                  data-path="/bibles"
-                >
-                  성경
-                </button>
-              </li>
-              {/* <li>
-                <button
-                  className="w-full px-8 py-2 hover:text-white"
-                  data-path="/way-to-come"
-                >
-                  오시는 길
-                </button>
-              </li> */}
+              {routes.length > 0 &&
+                routes.map((route) => (
+                  <li key={route.id}>
+                    <button
+                      className="w-full px-8 py-2 hover:text-white"
+                      data-path={route.path}
+                    >
+                      {route.name}
+                    </button>
+                  </li>
+                ))}
             </ul>
             <div className="mt-4 text-right">
               <img
