@@ -30,7 +30,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="sticky top-0 w-full border-b border-slate-50/[0.06] backdrop-blur">
+      <header className="sticky top-0 w-full border-b border-slate-50/[0.06] backdrop-blur z-[999]">
         <div className="max-w-lg mx-auto md:max-w-3xl lg:max-w-5xl">
           <div className="mx-4 py-4 flex justify-between items-center">
             <Link className="cursor-pointer" href={'/'}>
