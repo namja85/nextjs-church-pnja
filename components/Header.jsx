@@ -63,7 +63,7 @@ export default function Header() {
       </header>
       {open && (
         <div
-          className="max-w-lg mx-auto md:max-w-3xl lg:max-w-5xl fixed top-0 left-0 right-0 bottom-0 bg-slate-900/80 z-50 backdrop-blur-sm"
+          className="max-w-lg mx-auto md:max-w-3xl lg:max-w-5xl fixed top-0 left-0 right-0 bottom-0 bg-slate-900/80 z-[999] backdrop-blur-sm"
           onClick={close}
         >
           <div className="absolute top-8 right-8 flex flex-col w-64 bg-slate-800 shadow-lg rounded-lg p-4">
