@@ -2,8 +2,8 @@ import Head from 'next/head';
 import { useRef, useEffect } from 'react';
 
 const church = {
-  lat: 37.3849,
-  lng: 127.1406,
+  lat: 37.64700,
+  lng: 127.23511,
 };
 
 export default function WayToCome() {
@@ -12,8 +12,12 @@ export default function WayToCome() {
   useEffect(() => {
     mapRef.current = new naver.maps.Map('map', {
       center: new naver.maps.LatLng(church.lat, church.lng),
-      zoom: 10,
+      zoom: 19,
       zoomControl: true,
+    });
+    new naver.maps.Marker({
+      position: new naver.maps.LatLng(church.lat, church.lng),
+      map: mapRef.current
     });
   }, []);
 
