@@ -35,7 +35,14 @@ export default function Header() {
           <div className="mx-4 py-4 flex justify-between items-center">
             <Link className="cursor-pointer" href={'/'}>
               <a>
-                <img className="h-8" src="/logo.png" alt="평내중앙교회로고" />
+                <div className="relative w-32 aspect-[2/1]">
+                  <Image
+                    src="/logo.png"
+                    alt="평내중앙교회로고"
+                    layout="fill"
+                    objectFit="contain"
+                  />
+                </div>
               </a>
             </Link>
 
@@ -86,12 +93,15 @@ export default function Header() {
                   </li>
                 ))}
             </ul>
-            <div className="mt-4 text-right">
-              <img
-                className="inline h-4"
-                src="/logo.png"
-                alt="평내중앙교회로고"
-              />
+            <div className="mt-4 flex justify-end">
+              <div className="relative w-16 aspect-[2/1]">
+                <Image
+                  src="/logo.png"
+                  alt="평내중앙교회로고"
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
             </div>
           </div>
         </div>

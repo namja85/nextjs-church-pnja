@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { format } from 'date-fns';
 import { ko } from 'date-fns/locale';
 import ExternalLinkIcon from '../../components/ExternalLinkIcon';
@@ -8,6 +9,11 @@ export default function Bulletins() {
   const { main, praise, wed } = worships;
   return (
     <div className="container flex flex-col space-y-8 p-4">
+      <Head>
+        <title>평내중앙교회 | 주보</title>
+        <meta name="description" content="최신 주보를 공유합니다." />
+      </Head>
+
       <p className="flex justify-between">
         <a href={worships.imageUrl}>
           <span className="text-slate-400 hover:text-slate-300">

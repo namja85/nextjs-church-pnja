@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Link from 'next/link';
 import Hero from '../components/Hero';
 import Introduce from '../components/Introduce';
@@ -8,6 +9,12 @@ import BookIcon from '../components/BookIcon';
 export default function Home() {
   return (
     <div className="container p-4">
+      <Head>
+        <title>평내중앙교회</title>
+        <meta name="description" content="평내중앙교회는 여러분을 환영합니다." />
+        <link rel="canonical" href="https://www.pnja.or.kr"></link>
+      </Head>
+
       <Hero>
         <Link href="/bulletins">
           <a>

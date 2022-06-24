@@ -4,9 +4,6 @@ export default function Document() {
   return (
     <Html>
       <Head>
-        <title>평내중앙교회</title>
-        <link rel="canonical" href="https://www.pnja.or.kr"></link>
-        <meta name="description" content="평내중앙교회는 여러분을 환영합니다." />
         <link rel="icon" href="/favicon.ico" />
         <link rel="shortcut icon" href="https://www.pnja.or.kr/favicon.ico"></link>
         <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png"></link>

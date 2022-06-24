@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { useState } from 'react';
 import Link from 'next/link';
 import ArrowRightIcon from '../../components/ArrowRightIcon';
@@ -16,6 +17,10 @@ export default function BibleList({ biblesData }) {
 
   return (
     <div className="container flex flex-col space-y-8 p-4">
+      <Head>
+        <title>평내중앙교회 | 성경</title>
+        <meta name="description" content="구약, 신약 성경 정보를 제공합니다." />
+      </Head>
       <div>
         <select
           className="form-select appearance-none block w-full px-3 py-1.5 text-base font-normal text-slate-300 bg-slate-700 bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-slate-300 focus:bg-slate-700 focus:border-blue-600 focus:outline-none"
