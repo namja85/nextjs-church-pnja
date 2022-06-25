@@ -80,7 +80,7 @@ export default function Header({ darkMode, toggleDarkMode }) {
       </header>
       {open && (
         <div
-          className="fixed top-0 left-0 right-0 bottom-0 dark:bg-slate-900/80 z-[999] backdrop-blur-sm"
+          className="fixed top-0 left-0 right-0 bottom-0 dark:bg-slate-900/80 z-[999] dark:backdrop-blur-sm"
           onClick={close}
         >
           <div className="relative w-full h-full max-w-lg mx-auto md:max-w-3xl lg:max-w-5xl">
