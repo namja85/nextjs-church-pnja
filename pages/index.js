@@ -8,7 +8,7 @@ import BookIcon from '../components/BookIcon';
 
 export default function Home() {
   return (
-    <div className="container p-4">
+    <div className="container px-4">
       <Head>
         <title>평내중앙교회</title>
         <meta

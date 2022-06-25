@@ -11,7 +11,7 @@ export default function ActiveLink({ children, href }) {
       <a>
         <span
           className={cn(
-            'px-8 py-2 hover:text-white hover:border-b-2 hover:border-b-sky-400',
+            'px-8 py-2 hover:text-slate-700 dark:hover:text-slate-300 hover:border-b-2 hover:border-b-sky-400',
             { 'text-white border-b-2 border-b-sky-500': active },
           )}
         >

@@ -36,7 +36,7 @@ export default function Header({ darkMode, toggleDarkMode }) {
 
   return (
     <>
-      <header className="sticky top-0 w-full border-b border-slate-50/[0.06] backdrop-blur z-[999]">
+      <header className="sticky top-0 w-full border-b shadow-sm dark:border-slate-50/[0.06] backdrop-blur z-[999]">
         <div className="max-w-lg mx-auto md:max-w-3xl lg:max-w-5xl">
           <div className="mx-4 py-4 flex justify-between items-center">
             <Link className="cursor-pointer" href={'/'}>
@@ -54,14 +54,14 @@ export default function Header({ darkMode, toggleDarkMode }) {
 
             <div className="lg:hidden">
               <button
-                className="text-slate-400 hover:cursor-pointer hover:text-slate-300"
+                className="hover:cursor-pointer hover:text-slate-700 dark:hover:text-slate-300"
                 onClick={toggle}
               >
                 <span className="sr-only">Navigation</span>
                 {!open && <MenuIcon />}
               </button>
             </div>
-            <div className="hidden lg:flex lg:items-center">
+            <div className="hidden lg:flex lg:items-center lg:space-x-8">
               <ul className="flex space-x-2">
                 {routes.length > 0 &&
                   routes.map((route) => (
@@ -80,41 +80,46 @@ export default function Header({ darkMode, toggleDarkMode }) {
       </header>
       {open && (
         <div
-          className="max-w-lg mx-auto md:max-w-3xl lg:max-w-5xl fixed top-0 left-0 right-0 bottom-0 bg-slate-900/80 z-[999] backdrop-blur-sm"
+          className="fixed top-0 left-0 right-0 bottom-0 dark:bg-slate-900/80 z-[999] backdrop-blur-sm"
           onClick={close}
         >
-          <div className="absolute top-8 right-8 flex flex-col w-64 bg-slate-800 shadow-lg rounded-lg p-4">
-            <div className="flex justify-between items-center border-b border-slate-400/10 pb-4">
-              <DarkModeButton
-                darkMode={darkMode}
-                toggleDarkMode={handleClickDarkModeButton}
-              />
-              <button className="text-slate-400 hover:cursor-pointer hover:text-slate-300">
-                <span className="sr-only">Navigation</span>
-                <CloseIcon />
-              </button>
-            </div>
-            <ul className="text-center space-y-8 pt-4" onClick={handleNavgate}>
-              {routes.length > 0 &&
-                routes.map((route) => (
-                  <li key={route.id}>
-                    <button
-                      className="w-full px-8 py-2 hover:text-white"
-                      data-path={route.path}
-                    >
-                      {route.name}
-                    </button>
-                  </li>
-                ))}
-            </ul>
-            <div className="mt-4 flex justify-end">
-              <div className="relative w-16 aspect-[2/1]">
-                <Image
-                  src="/logo.png"
-                  alt="평내중앙교회로고"
-                  layout="fill"
-                  objectFit="contain"
+          <div className="relative w-full h-full max-w-lg mx-auto md:max-w-3xl lg:max-w-5xl">
+            <div className="absolute top-4 right-0 flex flex-col w-64 bg-slate-50 dark:bg-slate-800 shadow-lg rounded-lg p-4">
+              <div className="flex justify-between items-center border-b border-slate-400/10 pb-4">
+                <DarkModeButton
+                  darkMode={darkMode}
+                  toggleDarkMode={handleClickDarkModeButton}
                 />
+                <button className="hover:cursor-pointer hover:text-slate-700 dark:hover:text-slate-300">
+                  <span className="sr-only">Navigation</span>
+                  <CloseIcon />
+                </button>
+              </div>
+              <ul
+                className="text-center space-y-8 pt-4"
+                onClick={handleNavgate}
+              >
+                {routes.length > 0 &&
+                  routes.map((route) => (
+                    <li key={route.id}>
+                      <button
+                        className="w-full px-8 py-2 hover:text-slate-700 dark:hover:text-slate-300"
+                        data-path={route.path}
+                      >
+                        {route.name}
+                      </button>
+                    </li>
+                  ))}
+              </ul>
+              <div className="mt-4 flex justify-end">
+                <div className="relative w-16 aspect-[2/1]">
+                  <Image
+                    src="/logo.png"
+                    alt="평내중앙교회로고"
+                    layout="fill"
+                    objectFit="contain"
+                  />
+                </div>
               </div>
             </div>
           </div>
