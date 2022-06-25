@@ -3,10 +3,10 @@ import { format } from 'date-fns';
 import { ko } from 'date-fns/locale';
 import ExternalLinkIcon from '../../components/ExternalLinkIcon';
 import WorshipContentBox from '../../components/WorshipContentBox';
-import worships from '../../posts/bulletins/_2225';
+import worships from '../../posts/bulletins/_2226';
 
 export default function Bulletins() {
-  const { main, praise, wed } = worships;
+  const { main, praise, wed, imageUrl } = worships;
   return (
     <div className="container flex flex-col space-y-8 p-4">
       <Head>
@@ -15,7 +15,7 @@ export default function Bulletins() {
       </Head>
 
       <p className="flex justify-between">
-        <a href={worships.imageUrl}>
+        <a href={imageUrl}>
           <span className="text-slate-400 hover:text-slate-300">
             <ExternalLinkIcon />
           </span>
