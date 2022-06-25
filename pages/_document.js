@@ -20,7 +20,7 @@ export default function Document() {
         <meta property="og:image" content="https://www.pnja.or.kr/icons/thumbnail.png"></meta>
         <meta property="og:url" content="https://www.pnja.or.kr"></meta>
       </Head>
-      <body className="antialiased bg-slate-900 text-slate-400">
+      <body className="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900">
         <Main />
         <NextScript />
       </body>

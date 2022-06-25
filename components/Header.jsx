@@ -5,6 +5,7 @@ import { useState } from 'react';
 import MenuIcon from './MenuIcon';
 import CloseIcon from './CloseIcon';
 import ActiveLink from './ActiveLink';
+import DarkModeButton from './DarkModeButton';
 
 const routes = [
   { id: 1, name: '주보', path: '/bulletins' },
@@ -12,14 +13,19 @@ const routes = [
   { id: 3, name: '오시는 길', path: '/way-to-come' },
 ];
 
-export default function Header() {
+export default function Header({ darkMode, toggleDarkMode }) {
   const [open, setOpen] = useState(false);
   const router = useRouter();
+
+  const handleClickDarkModeButton = (e) => {
+    e.stopPropagation();
+    toggleDarkMode();
+  };
 
   const toggle = () => {
     setOpen((open) => !open);
   };
-  const close = () => {
+  const close = (e) => {
     setOpen(() => false);
   };
 
@@ -55,7 +61,7 @@ export default function Header() {
                 {!open && <MenuIcon />}
               </button>
             </div>
-            <div className="hidden lg:block">
+            <div className="hidden lg:flex lg:items-center">
               <ul className="flex space-x-2">
                 {routes.length > 0 &&
                   routes.map((route) => (
@@ -64,6 +70,10 @@ export default function Header() {
                     </li>
                   ))}
               </ul>
+              <DarkModeButton
+                darkMode={darkMode}
+                toggleDarkMode={handleClickDarkModeButton}
+              />
             </div>
           </div>
         </div>
@@ -74,7 +84,11 @@ export default function Header() {
           onClick={close}
         >
           <div className="absolute top-8 right-8 flex flex-col w-64 bg-slate-800 shadow-lg rounded-lg p-4">
-            <div className="flex justify-end border-b border-slate-400/10 pb-4">
+            <div className="flex justify-between items-center border-b border-slate-400/10 pb-4">
+              <DarkModeButton
+                darkMode={darkMode}
+                toggleDarkMode={handleClickDarkModeButton}
+              />
               <button className="text-slate-400 hover:cursor-pointer hover:text-slate-300">
                 <span className="sr-only">Navigation</span>
                 <CloseIcon />

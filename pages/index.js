@@ -11,7 +11,10 @@ export default function Home() {
     <div className="container p-4">
       <Head>
         <title>평내중앙교회</title>
-        <meta name="description" content="평내중앙교회는 여러분을 환영합니다." />
+        <meta
+          name="description"
+          content="평내중앙교회는 여러분을 환영합니다."
+        />
         <link rel="canonical" href="https://www.pnja.or.kr"></link>
       </Head>
 
