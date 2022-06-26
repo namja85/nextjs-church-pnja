@@ -1,7 +1,7 @@
 import Script from 'next/script';
 import Layout from '../components/Layout';
+import useDarkMode from '../hooks/useDarkMode';
 import '../styles/globals.css';
-import useDarkMode from './hooks/useDarkMode';
 
 function MyApp({ Component, pageProps }) {
   const [darkMode, toggleDarkMode] = useDarkMode();
