@@ -62,7 +62,7 @@ export default function Header({ darkMode, toggleDarkMode }) {
               </button>
             </div>
             <div className="hidden lg:flex lg:items-center lg:space-x-8">
-              <ul className="flex space-x-2">
+              <ul className="flex space-x-8">
                 {routes.length > 0 &&
                   routes.map((route) => (
                     <li key={route.id}>
@@ -80,11 +80,11 @@ export default function Header({ darkMode, toggleDarkMode }) {
       </header>
       {open && (
         <div
-          className="fixed top-0 left-0 right-0 bottom-0 dark:bg-slate-900/80 z-[999] dark:backdrop-blur-sm"
+          className="fixed top-0 left-0 right-0 bottom-0 bg-slate-900/5 dark:bg-slate-900/80 z-[999] backdrop-blur-sm"
           onClick={close}
         >
           <div className="relative w-full h-full max-w-lg mx-auto md:max-w-3xl lg:max-w-5xl">
-            <div className="absolute top-4 right-0 flex flex-col w-64 bg-slate-50 dark:bg-slate-800 shadow-lg rounded-lg p-4">
+            <div className="absolute top-4 right-4 flex flex-col w-64 bg-slate-50 dark:bg-slate-800 shadow-lg rounded-lg p-4">
               <div className="flex justify-between items-center border-b border-slate-400/10 pb-4">
                 <DarkModeButton
                   darkMode={darkMode}

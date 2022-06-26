@@ -14,7 +14,7 @@ function parseToPath(bible) {
 
 export default function WorshipContentBox({ worship }) {
   return (
-    <div className="p-4 ring-1 rounded-lg space-y-8">
+    <div className="p-4 bg-white dark:bg-slate-800  shadow border border-slate-900/5 dark:ring-1 rounded-lg space-y-8">
       <h2 className="font-extrabold text-4xl text-center tracking-widest">
         {worship.제목}
       </h2>

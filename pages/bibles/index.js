@@ -23,7 +23,7 @@ export default function BibleList({ biblesData }) {
       </Head>
       <div>
         <select
-          className="form-select appearance-none block w-full px-3 py-1.5 text-base font-normal dark:text-slate-300 dark:bg-slate-700 bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-slate-300 focus:bg-slate-700 focus:border-blue-600 focus:outline-none"
+          className="form-select appearance-none block w-full px-3 py-1.5 text-base font-normal dark:text-slate-300 dark:bg-slate-700 bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-slate-700 focus:bg-slate-50 focus:border-blue-300 dark:focus:text-slate-300 dark:focus:bg-slate-700 dark:focus:border-blue-600 focus:outline-none"
           onChange={onChange}
         >
           {bibleList.map((bible) => (

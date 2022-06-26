@@ -30,11 +30,13 @@ export default function WayToCome() {
           평내중앙교회
         </h1>
         <p className="mb-2">(12223) 경기도 남양주시 평내로29번길 51-30</p>
-        <div id="map" className="w-full h-96 lg:h-[35rem] rounded-2xl"></div>
+        <div className="rounded-2xl border border-slate-900/5 overflow-hidden dark:border-sky-600 shadow dark:shadow-slate-800">
+          <div id="map" className="w-full h-96 lg:h-[35rem]"></div>
+        </div>
       </div>
       <div className="my-16">
         <h1 className="text-3xl font-bold tracking-wide my-8">오시는 방법</h1>
-        <div className="flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-16 rounded-2xl ring-1 p-4">
+        <div className="flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-16 bg-white dark:bg-slate-800 rounded-2xl border border-slate-900/5 shadow dark:ring-1 p-4">
           <div className="flex-1 p-4">
             <h4 className="text-xl font-semibold mb-4">버스</h4>
             <div className="space-y-1">
