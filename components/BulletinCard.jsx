@@ -31,9 +31,9 @@ export default function BulletinCard({ id, content }) {
 
   return (
     <Link href={`/bulletins/${id}`}>
-      <a>
-        <div className="border border-slate-900/5 dark:border-0 dark:ring-1 rounded-2xl shadow place-self-center overflow-hidden">
-          <div className="relative -m-1 h-48 w-80">
+      <a className="flex justify-center">
+        <div className="border w-80 border-slate-900/5 dark:border-0 dark:ring-1 rounded-2xl shadow place-self-center overflow-hidden">
+          <div className="relative h-48 w-full overflow-hidden">
             <Image
               src={image.src}
               alt={image.alt}
