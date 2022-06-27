@@ -12,7 +12,7 @@ export default function IntroCard({ name, imgPath, text, bibleNum }) {
             src={imgPath}
             alt={name}
             layout="fill"
-            objectFit="cover"
+            objectFit="fill"
             priority
           />
         </div>

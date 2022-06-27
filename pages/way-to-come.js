@@ -22,7 +22,7 @@ export default function WayToCome() {
   return (
     <div className="container p-4">
       <Head>
-        <title>평내중앙교회 | 오시는 길</title>
+        <title>오시는 길 | 평내중앙교회</title>
       </Head>
 
       <div className="mt-8">
