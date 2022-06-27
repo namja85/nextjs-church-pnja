@@ -47,6 +47,7 @@ export default function Header({ darkMode, toggleDarkMode }) {
                     alt="평내중앙교회로고"
                     layout="fill"
                     objectFit="contain"
+                    priority
                   />
                 </div>
               </a>
