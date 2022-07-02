@@ -44,7 +44,9 @@ export default function BulletinCard({ id, content }) {
           </div>
           <div className="p-4 space-y-4 bg-white dark:bg-slate-800">
             <div className="flex justify-between items-center">
-              <h4 className="text-lg font-bold">{id}주차</h4>
+              <h4 className="text-lg font-bold">
+                {Math.floor(id / 100)}년 {id % 100}주차
+              </h4>
               <small>
                 {format(new Date(main.시간), 'PPPP', { locale: ko })}
               </small>

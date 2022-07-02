@@ -11,10 +11,14 @@ export default function Bulletin({ id, content }) {
   return (
     <div className="container p-4">
       <Head>
-        <title>주보 - {id}주차 | 평내중앙교회</title>
+        <title>
+          주보 - {Math.floor(id / 100)}년 {id % 100}주차 | 평내중앙교회
+        </title>
         <meta
           name="description"
-          content={`평내중앙교회의 ${id}주차 주보 정보입니다.`}
+          content={`평내중앙교회의 ${Math.floor(id / 100) + 2000}년 ${
+            id % 100
+          }주차 주보 정보입니다.`}
         />
       </Head>
 
@@ -23,8 +27,11 @@ export default function Bulletin({ id, content }) {
           주보
         </h1>
         <h2 className="text-center">
-          평내중앙교회의 <strong className="text-lg">{id}주차</strong> 주보
-          정보입니다.
+          평내중앙교회의{' '}
+          <strong className="text-lg">
+            {Math.floor(id / 100)}년 {id % 100}주차
+          </strong>{' '}
+          주보 정보입니다.
         </h2>
       </div>
 
