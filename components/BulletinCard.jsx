@@ -50,7 +50,7 @@ export default function BulletinCard({ id, content }) {
               </small>
             </div>
             <div>
-              <p className="text-lg text-center">
+              <p className="text-lg text-center min-h-[60px]">
                 <em>
                   {main.차례.강론[1]} ({main.차례.성경봉독[1]})
                 </em>
