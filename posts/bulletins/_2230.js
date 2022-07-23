@@ -1,18 +1,13 @@
-import {
-  getMainWorshipDateTime,
-  getPraiseWorshipDateTime,
-  getWedWorshipDateTime,
-} from '../../libs/date';
-
-// const date = new Date('2022/07/24');
-const date = '2022-07-24T00:00:00+09:00';
+const mainWorshipDate = '2022-07-24T11:00:00';
+const praiseWorshipDate = '2022-07-24T13:30:00';
+const wedWorshipDate = '2022-07-27T19:00:00';
 
 const worships = {
   imageUrl: '',
   main: {
     제목: '주일낮예배',
     구절: '하나님은 영이시니 예배하는 자가 신령과 진정으로 예배할지니라 (요 4:24)',
-    시간: getMainWorshipDateTime(date),
+    시간: mainWorshipDate,
     인도: '김정안 목사',
     차례: {
       전주: ['김지혜 반주'],
@@ -36,7 +31,7 @@ const worships = {
   praise: {
     제목: '주일찬양예배',
     구절: '할렐루야 새 노래로 여호와께 노래하며 성도의 희중에서 찬양할지어다 (시 149:1)',
-    시간: getPraiseWorshipDateTime(date),
+    시간: praiseWorshipDate,
     인도: '김정안 목사',
     차례: {
       전주: ['김지혜 반주'],
@@ -52,7 +47,7 @@ const worships = {
   },
   wed: {
     제목: '수요일예배',
-    시간: getWedWorshipDateTime(date),
+    시간: wedWorshipDate,
     인도: '김정안 목사',
     차례: {
       묵도: ['다같이'],
