@@ -4,7 +4,8 @@ import {
   getWedWorshipDateTime,
 } from '../../libs/date';
 
-const date = new Date('2022/07/24');
+// const date = new Date('2022/07/24');
+const date = '2022-07-24T00:00:00+09:00';
 
 const worships = {
   imageUrl: '',

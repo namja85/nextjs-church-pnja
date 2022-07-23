@@ -1,4 +1,5 @@
 import nextWednesday from 'date-fns/nextWednesday';
+import parseISO from 'date-fns/parseISO';
 
 function setTimes(date, { hour, min }) {
   const target = new Date(date);
@@ -18,5 +19,5 @@ export function getPraiseWorshipDateTime(date) {
 
 export function getWedWorshipDateTime(date) {
   const times = { hour: 19, min: 0 };
-  return setTimes(nextWednesday(date), times);
+  return setTimes(nextWednesday(parseISO(date)), times);
 }
