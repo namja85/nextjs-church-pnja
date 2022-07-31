@@ -33,7 +33,7 @@ export default function WorshipContentBox({ worship }) {
       <div className="flex flex-col space-y-1">
         {Object.keys(worship.차례).map((key) => {
           const [name, content] = worship.차례[key];
-          return key === '성경봉독' ? (
+          return key === '성경봉독' && content ? (
             <Link key={key} href={`/bibles/${parseToPath(content)}`}>
               <a>
                 <p className="flex justify-between hover:font-bold hover:text-slate-300">
