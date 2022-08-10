@@ -7,7 +7,7 @@ export default function Bible({ id, content }) {
   const find = biblesInfo.find(({ title }) => title.english === english);
 
   return (
-    <article className="prose dark:prose-invert container p-4 mx-auto">
+    <article className="prose dark:prose-invert prose-headings:my-32 prose-headings:text-center p-4 mx-auto">
       <Head>
         <title>
           성경 - {find.title.korean} {num}장 | 평내중앙교회
