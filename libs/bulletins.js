@@ -10,6 +10,7 @@ const _2229 = require('../posts/bulletins/_2229');
 const _2230 = require('../posts/bulletins/_2230');
 const _2231 = require('../posts/bulletins/_2231');
 const _2232 = require('../posts/bulletins/_2232');
+const _2233 = require('../posts/bulletins/_2233');
 
 const bulletins = [
   { id: '2221', content: _2221 },
@@ -24,6 +25,7 @@ const bulletins = [
   { id: '2230', content: _2230 },
   { id: '2231', content: _2231 },
   { id: '2232', content: _2232 },
+  { id: '2233', content: _2233 },
 ];
 
 export function getBulletins() {
