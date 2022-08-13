@@ -1,13 +1,24 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
+import { useState, useEffect } from 'react';
 import { getBibleContent, getBibleIds } from '../../libs/bibles';
 import biblesInfo from '../../libs/biblesInfo';
 
 export default function Bible({ id, content }) {
+  const [startNum, setStartNum] = useState();
+  const [endNum, setEndNum] = useState();
+  const router = useRouter();
   const [english, num] = id.split('-');
   const find = biblesInfo.find(({ title }) => title.english === english);
 
+  useEffect(() => {
+    const { s, e } = router.query;
+    setStartNum(s);
+    setEndNum(e);
+  }, [router]);
+
   return (
-    <article className="prose dark:prose-invert container p-4 mx-auto">
+    <article className="prose dark:prose-invert prose-headings:my-32 prose-headings:text-center p-4 mx-auto">
       <Head>
         <title>
           성경 - {find.title.korean} {num}장 | 평내중앙교회
