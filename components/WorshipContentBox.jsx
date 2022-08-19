@@ -25,7 +25,9 @@ export default function WorshipContentBox({ worship }) {
       ) : null}
       <p className="flex justify-between">
         <span className="flex-1 text-center">
-          {format(new Date(worship.시간), 'a hh:mm', { locale: ko })}
+          {format(new Date(worship.시간), 'P p', {
+            locale: ko,
+          })}
         </span>
         <span className="flex-[2]"></span>
         <span className="flex-1 text-center">인도: {worship.인도}</span>
