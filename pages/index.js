@@ -27,14 +27,14 @@ export default function Home() {
             </Button>
           </a>
         </Link>
-        <Link href="/bibles">
+        {/* <Link href="/bibles">
           <a>
             <Button outlined>
               <span>성경</span>
               <BookIcon />
             </Button>
           </a>
-        </Link>
+        </Link> */}
       </Hero>
       <Introduce />
     </div>

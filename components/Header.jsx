@@ -9,7 +9,7 @@ import DarkModeButton from './DarkModeButton';
 
 const routes = [
   { id: 1, name: '주보', path: '/bulletins' },
-  { id: 2, name: '성경', path: '/bibles' },
+  // { id: 2, name: '성경', path: '/bibles' },
   { id: 3, name: '오시는 길', path: '/way-to-come' },
 ];
 

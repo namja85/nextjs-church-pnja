@@ -55,8 +55,9 @@ export default function BibleList({ biblesData }) {
 export async function getStaticProps() {
   const biblesData = getBiblesData();
   return {
-    props: {
-      biblesData,
-    },
+    // props: {
+    //   biblesData,
+    // },
+    notFound: true
   };
 }

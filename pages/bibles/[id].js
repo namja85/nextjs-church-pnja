@@ -49,10 +49,11 @@ export async function getStaticProps({ params }) {
   const { id } = params;
   const content = await getBibleContent(id);
   return {
-    props: {
-      id,
-      content,
-    },
+    // props: {
+    //   id,
+    //   content,
+    // },
+    notFound: true
   };
 }
 
