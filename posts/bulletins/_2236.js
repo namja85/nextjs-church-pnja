@@ -1,5 +1,5 @@
-const mainWorshipDate = '2022-09-03T11:00:00';
-const praiseWorshipDate = '2022-09-03T13:30:00';
+const mainWorshipDate = '2022-09-04T11:00:00';
+const praiseWorshipDate = '2022-09-04T13:30:00';
 const wedWorshipDate = '2022-09-07T19:00:00';
 
 const worships = {
