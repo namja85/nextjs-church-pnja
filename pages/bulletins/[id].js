@@ -61,7 +61,7 @@ export async function getStaticPaths() {
 
   return {
     paths: bulletinIds.map((id) => ({ params: { id } })),
-    fallback: false,
+    fallback: true,
   };
 }
 
