@@ -14,7 +14,7 @@ export default function Footer() {
           <p className="space-x-1 flex items-center">
             <MailIcon />
             <small>
-              <a href="mailto:info@pnja.or.kr">문의: info@pnja.or.kr</a>
+              <a href="mailto:info@pnja.or.kr">info@pnja.or.kr</a>
             </small>
           </p>
           <p className='mt-4'>
