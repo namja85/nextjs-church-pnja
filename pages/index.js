@@ -15,7 +15,6 @@ export default function Home() {
           name="description"
           content="평내중앙교회는 여러분을 환영합니다."
         />
-        <link rel="canonical" href="https://www.pnja.or.kr"></link>
       </Head>
 
       <Hero>
