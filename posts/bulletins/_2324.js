@@ -1,6 +1,6 @@
-const mainWorshipDate = '2023-06-04T11:00:00';
-const praiseWorshipDate = '2023-06-04T13:30:00';
-const wedWorshipDate = '2023-06-07T19:00:00';
+const mainWorshipDate = '2023-06-11T11:00:00';
+const praiseWorshipDate = '2023-06-14T13:30:00';
+const wedWorshipDate = '2023-06-14T19:00:00';
 
 const worships = {
   imageUrl: '',
