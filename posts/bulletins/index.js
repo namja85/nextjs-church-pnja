@@ -58,4 +58,5 @@ export default [
   { id: '2326', content: require('./_2326') },
   { id: '2327', content: require('./_2327') },
   { id: '2328', content: require('./_2328') },
+  { id: '2329', content: require('./_2329') },
 ];
