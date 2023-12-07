@@ -18,14 +18,14 @@ export default function Home() {
       </Head>
 
       <Hero>
-        <Link href="/bulletins">
+        {/* <Link href="/bulletins">
           <a>
             <Button>
               <span>주보</span>
               <DocumentIcon />
             </Button>
           </a>
-        </Link>
+        </Link> */}
         {/* <Link href="/bibles">
           <a>
             <Button outlined>
