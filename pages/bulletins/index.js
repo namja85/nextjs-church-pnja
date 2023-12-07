@@ -14,9 +14,10 @@ export default function Bulletins({ bulletins }) {
       </Head>
 
       <div className="space-y-4">
-        <h1 className="text-slate-900 dark:text-slate-200 text-5xl font-bold tracking-wide my-8 text-center">
+        <h1 className="text-slate-900 dark:text-slate-200 text-3xl font-bold tracking-wide my-8">
           주보
         </h1>
+        <hr />
         <h2 className="text-center">
           평내중앙교회의 최신 주보와 지난 주보의 정보를 확인 할 수 있습니다.
         </h2>
