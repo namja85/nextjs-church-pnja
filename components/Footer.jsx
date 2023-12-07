@@ -18,7 +18,7 @@ export default function Footer() {
             </small>
           </p>
           <p className='mt-4'>
-            <small>Copyright © 2022 평내중앙교회. All rights reserved.</small>
+            <small>Copyright © 2024 평내중앙교회. All rights reserved.</small>
           </p>
         </div>
         <div className="relative w-28 aspect-[2/1]">
