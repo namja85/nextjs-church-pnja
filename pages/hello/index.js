@@ -21,7 +21,7 @@ export default function Hello() {
         </h2>
       </div>
 
-      <div className="my-16 flex flex-col justify-center text-center space-y-4">
+      <div className="text-lg px-4 sm:px-0 my-16 flex flex-col justify-center text-center space-y-4">
         <p>예수 그리스도의 이름으로 여러분을 환영합니다.</p>
         <p>&quot;평내중앙교회&quot;는 지역의 복음화를 위한 다음세대를 준비하기 위하여</p>
         <p>&quot;세계선교를 통한 인재양성, 금융권을 통한 선교, 학원가를 통한 선교&quot;라는 교회의 3대 Vision을 가지고 기도하며 실천하고 있습니다.</p>

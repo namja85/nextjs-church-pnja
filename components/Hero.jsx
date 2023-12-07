@@ -3,9 +3,9 @@ export default function Hero({ children }) {
     <div className="pt-16 pb-32 px-16 lg:pt-32 lg:pb-48 lg:px-4">
       <h1 className="font-main font-black text-center mb-16 flex flex-col space-y-4 lg:flex-row lg:justify-center lg:items-center lg:space-y-0 lg:space-x-2">
         <span className="text-3xl lg:text-5xl">세계로 선교하는</span>
-        <span className="text-5xl tracking-widest lg:text-[4rem]">평내중앙교회</span>
+        <span className="text-4xl tracking-widest lg:text-[4rem]">평내중앙교회</span>
       </h1>
-      <div className="font-myeongjo text-center leading-relaxed dark:text-slate-100 font-bold text-lg">
+      <div className="font-myeongjo text-center leading-relaxed dark:text-slate-100 font-bold text-md md:text-lg">
         <p className="md:mr-16">말씀이 살아 역사하는 교회</p>
         <p className="">찬양과 기도가 뜨거운 교회</p>
         <p className="md:ml-32">사랑과 감사로 지역을 섬기는 교회</p>
