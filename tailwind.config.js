@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      'myeongjo': ['NanumMyeongjo'],
+      'main': ['SOYOMapleBoldTTF']
+    }
   },
   plugins: [require('@tailwindcss/typography')],
 };

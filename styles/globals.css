@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "NanumMyeongjo";
+  font-weight: 200;
+  src: url("/fonts/NanumMyeongjo.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'SOYOMapleBoldTTF';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/SOYOMapleBoldTTF.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
