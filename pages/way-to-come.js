@@ -41,7 +41,7 @@ export default function WayToCome() {
             <h4 className="text-xl font-semibold mb-4">버스</h4>
             <div className="space-y-1">
               <p className="ml-4 relative before:absolute before:content-['-'] before:-left-3">
-                <span className="font-bold">광역</span>: M2323
+                <span className="font-bold">광역</span>: M2352
               </p>
               <p className="ml-4 relative before:absolute before:content-['-'] before:-left-3">
                 <span className="font-bold">일반</span>: 1-4, 10-5, 30, 55, 65,
@@ -51,7 +51,7 @@ export default function WayToCome() {
                 <span className="font-bold">좌석</span>: 330-1
               </p>
               <p className="ml-4 relative before:absolute before:content-['-'] before:-left-3">
-                <span className="font-bold">직행</span>: 1000-1, 1200, 1200-1,
+                <span className="font-bold">직행</span>: 1200, 1200-1,
                 1330-2, 1330-3, 1330-4, 1330-44
               </p>
               <p className="ml-4 relative before:absolute before:content-['-'] before:-left-3">
@@ -61,7 +61,7 @@ export default function WayToCome() {
             </div>
           </div>
           <div className="flex-1 p-4">
-            <h4 className="text-xl font-semibold mb-4">지하철</h4>
+            <h4 className="text-xl font-semibold mb-4">전철</h4>
             <div className="space-y-1">
               <p className="ml-4 relative before:absolute before:content-['-'] before:-left-3">
                 <span className="font-bold">노선</span>: 경춘선
