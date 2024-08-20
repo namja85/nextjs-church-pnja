@@ -1,0 +1,64 @@
+.calendarWrapper {
+    font-family: 'Gowun Dodum', serif;
+    background: #f6f5f5;
+}
+.calendarWrapper .date {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    letter-spacing: 3px;
+    opacity: 0.8;
+    font-family: Crimson Pro;
+    color: #524548;
+    text-align: center;
+}
+
+.calendarWrapper .hour {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    font-family: 'Gowun Dodum', serif;
+    color: #524548;
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+.calendarWrapper .dday {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    font-family: 'Gowun Dodum', serif;
+    color: #524548;
+    text-align: center;
+    margin-top: 1.25rem;
+}
+
+.calendarWrapper .pink {
+    color: #c6472b;
+}
+
+.calendarWrapper .calendarContent {
+    border: 1px solid #e8dfdf;
+    border-left: 0;
+    border-right: 0;
+    padding: 0 1rem;
+}
+
+.calendarWrapper table {
+    text-align: center;
+}
+.calendarContent table .event {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.calendarContent table .event span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #cec3c3;
+}
+.calendarWrapper table tr th:first-child,
+.calendarWrapper table tr td:first-child {
+    color: #c6472b;
+}
