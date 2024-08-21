@@ -2,6 +2,8 @@ import Head from 'next/head';
 import Hero from '../../components/invitation/Hero';
 import Paragraph from '../../components/invitation/Paragraph';
 import Calendar from '../../components/invitation/Calendar';
+import Map from '../../components/invitation/Map';
+import Footer from '../../components/invitation/Footer';
 
 export default function Invitation() {
   return (
@@ -32,6 +34,8 @@ export default function Invitation() {
         <Hero />
         <Paragraph />
         <Calendar />
+        <Map />
+        <Footer />
       </div>
     </div>
   );
