@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import Hero from '../../components/invitation/Hero';
+import Paragraph from '../../components/invitation/Paragraph';
 import Calendar from '../../components/invitation/Calendar';
 
 export default function Invitation() {
@@ -11,10 +13,10 @@ export default function Invitation() {
           content="2024년도 평내중앙교회 임직감사예배에 초대합니다."
         />
         <meta property="og:type" content="website"></meta>
-        <meta property="og:title" content="임직감사예배 초대장"></meta>
+        <meta property="og:title" content="임직감사예배 초대장✉️"></meta>
         <meta
           property="og:description"
-          content="2024년도 평내중앙교회 임직감사예배에 초대합니다."
+          content="2024.09.29 오전 11시 평내중앙교회 3층 본당"
         ></meta>
         <meta
           property="og:image"
@@ -26,7 +28,9 @@ export default function Invitation() {
         ></meta>
       </Head>
 
-      <div className="mx-auto max-w-md">
+      <div className="mx-auto max-w-md shadow-md">
+        <Hero />
+        <Paragraph />
         <Calendar />
       </div>
     </div>

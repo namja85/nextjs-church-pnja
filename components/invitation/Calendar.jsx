@@ -3,10 +3,11 @@ import styles from '../../pages/notice/invitation.module.css';
 export default function Calendar() {
   return (
     <div className={styles.calendarWrapper}>
-      <div className="calendar-inner bg-gray-50 w-full">
+      <div className="calendar-inner p-8 bg-gray-50 w-full">
         <div className="title">
           <p className={styles.date}>2024.09.29</p>
           <p className={styles.hour}>일요일 오전 11시</p>
+          <p className="bg-blue-200"></p>
         </div>
         <div className={styles.calendarContent}>
           <table cellSpacing={0} className="leading-8 w-full my-4">

@@ -1,64 +1,129 @@
 .calendarWrapper {
-    font-family: 'Gowun Dodum', serif;
-    background: #f6f5f5;
+  font-family: 'Gowun Dodum', serif;
+  background: #f6f5f5;
 }
 .calendarWrapper .date {
-    font-size: 1.4rem;
-    line-height: 1.8rem;
-    letter-spacing: 3px;
-    opacity: 0.8;
-    font-family: Crimson Pro;
-    color: #524548;
-    text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  letter-spacing: 3px;
+  opacity: 0.8;
+  font-family: Crimson Pro;
+  color: #524548;
+  text-align: center;
 }
 
 .calendarWrapper .hour {
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    font-family: 'Gowun Dodum', serif;
-    color: #524548;
-    text-align: center;
-    margin-bottom: 1.25rem;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  font-family: 'Gowun Dodum', serif;
+  color: #524548;
+  text-align: center;
+  margin-bottom: 1.25rem;
 }
 .calendarWrapper .dday {
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    font-family: 'Gowun Dodum', serif;
-    color: #524548;
-    text-align: center;
-    margin-top: 1.25rem;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  font-family: 'Gowun Dodum', serif;
+  color: #524548;
+  text-align: center;
+  margin-top: 1.25rem;
 }
 
 .calendarWrapper .pink {
-    color: #c6472b;
+  color: #c6472b;
 }
 
 .calendarWrapper .calendarContent {
-    border: 1px solid #e8dfdf;
-    border-left: 0;
-    border-right: 0;
-    padding: 0 1rem;
+  border: 1px solid #e8dfdf;
+  border-left: 0;
+  border-right: 0;
+  padding: 0 1rem;
 }
 
 .calendarWrapper table {
-    text-align: center;
+  text-align: center;
 }
 .calendarContent table .event {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .calendarContent table .event span {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: #cec3c3;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #cec3c3;
 }
 .calendarWrapper table tr th:first-child,
 .calendarWrapper table tr td:first-child {
-    color: #c6472b;
+  color: #c6472b;
+}
+
+.heroWrapper {
+  font-family: 'Gowun Dodum', serif;
+  background: #f6f5f5;
+}
+
+.heroWrapper .title {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, 150px);
+  z-index: 10;
+}
+.heroWrapper .title h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1.8rem;
+  letter-spacing: 3px;
+  opacity: 0.8;
+  font-family: 'Gowun Dodum', serif;
+  color: #524548;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.heroWrapper .title p {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  letter-spacing: 3px;
+  opacity: 0.8;
+  font-family: 'Gowun Dodum', serif;
+  color: #524548;
+  text-align: center;
+}
+
+.paragraphWrapper {
+  font-family: 'Gowun Dodum', serif;
+  background: #f6f5f5;
+}
+
+.paragraphWrapper .titleEng {
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #c2b2b2;
+  font-family: Crimson Pro;
+}
+.paragraphWrapper .title {
+  font-size: 1.2rem;
+}
+.paragraphWrapper .text {
+  font-size: 1rem;
+  line-height: 1.8rem;
+  /* letter-spacing: 3px; */
+  opacity: 0.8;
+  font-family: 'Gowun Dodum', serif;
+  color: #524548;
+  text-align: center;
+  padding: 0 4rem;
+  word-wrap: break-word; /* 긴 단어는 줄을 바꿔 표현 */
+  overflow-wrap: break-word; /* 표준 속성 */
+  white-space: normal; /* 기본 줄 바꿈 적용 */
+  word-break: keep-all; /* 단어를 깨지 않고 유지 */
 }
