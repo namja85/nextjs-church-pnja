@@ -1,7 +1,7 @@
+import { useRef, useEffect } from 'react';
 import BusIcon from '../BusIcon';
 import MetroIcon from '../MetroIcon';
 import CarIcon from '../CarIcon';
-import { useEffect } from 'react';
 import styles from '../../pages/notice/invitation.module.css';
 
 const church = {
@@ -10,6 +10,40 @@ const church = {
 };
 
 export default function Map() {
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
+  const ref3 = useRef(null);
+  const ref4 = useRef(null);
+  const ref5 = useRef(null);
+  const ref6 = useRef(null);
+  const ref7 = useRef(null);
+
+  useEffect(() => {
+    const observerCallbackFn = (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = 1;
+          e.target.style.transform = "translateY(0)"
+        }
+      });
+    };
+    const options = {
+      root: null,
+      rootMargin: '0px 0px -200px 0px',
+      threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver(observerCallbackFn, options);
+
+    observer.observe(ref1.current);
+    observer.observe(ref2.current);
+    observer.observe(ref3.current);
+    observer.observe(ref4.current);
+    observer.observe(ref5.current);
+    observer.observe(ref6.current);
+    observer.observe(ref7.current);
+  }, []);
+
   useEffect(() => {
     if (naver?.maps?.Map) {
       const map = new naver.maps.Map('map', {
@@ -28,18 +62,22 @@ export default function Map() {
     <div className={styles.mapWrapper}>
       <div className="map-inner p-8 bg-gray-50 w-full">
         <div className="py-8 space-y-2">
-          <h3 className="text-center mb-8">
+          <h3 ref={ref1} className="text-center mb-8 opacity-0 translate-y-[20px] transition-all duration-500 ease-in">
             <span className={styles.titleEng}>location</span>
             <br />
             <span className={styles.title}>오시는 길</span>
           </h3>
-          <p className={styles.text}>평내중앙교회 3층 본당</p>
-          <p className={styles.text}>경기 남양주시 평내로29번길 51-30</p>
-          <div>
+          <div ref={ref2} className="opacity-0 translate-y-[20px] transition-all duration-500 ease-in">
+            <p className={styles.text}>평내중앙교회 3층 본당</p>
+          </div>
+          <div ref={ref3} className="opacity-0 translate-y-[20px] transition-all duration-500 ease-in">
+            <p className={styles.text}>경기 남양주시 평내로29번길 51-30</p>
+          </div>
+          <div ref={ref4} className="opacity-0 translate-y-[20px] transition-all duration-500 ease-in">
             <div id="map" className="my-8 w-full h-96 lg:h-[35rem]"></div>
           </div>
           <div className="divide-y divide-[#e9e5e]">
-            <div className="flex py-8">
+            <div ref={ref5} className="flex py-8 opacity-0 translate-y-[20px] transition-all duration-500 ease-in">
               <div className="mr-4">
                 <div className={styles.iconCircle}>
                   <BusIcon />
@@ -56,7 +94,7 @@ export default function Map() {
                 </p>
               </div>
             </div>
-            <div className="flex py-8">
+            <div ref={ref6} className="flex py-8 opacity-0 translate-y-[20px] transition-all duration-500 ease-in">
               <div className="mr-4">
                 <div className={styles.iconCircle}>
                   <MetroIcon />
@@ -67,7 +105,7 @@ export default function Map() {
                 <p className={styles.trafficContent}>경춘선 평내호평역 하차</p>
               </div>
             </div>
-            <div className="flex py-8">
+            <div ref={ref7} className="flex py-8 opacity-0 translate-y-[20px] transition-all duration-500 ease-in">
               <div className="mr-4">
                 <div className={styles.iconCircle}>
                   <CarIcon />

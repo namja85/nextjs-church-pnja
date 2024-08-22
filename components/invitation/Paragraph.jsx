@@ -10,19 +10,22 @@ export default function Paragraph() {
   const ref6 = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          console.log(e.target, e.isIntersecting, e.intersectionRatio);
-          // if (e.isIntersecting) {
-          // if (e.intersectionRatio > 0.5) {
-          //   e.target.style.opacity = 1;
-          // }
-          e.target.style.opacity = 1;
-        });
-      },
-      { threshold: 0.5 },
-    );
+    const observerCallbackFn = (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = 0.8;
+          e.target.style.transform = "translateY(0)"
+        }
+      });
+    };
+    const options = {
+      root: null,
+      rootMargin: '0px 0px -200px 0px',
+      threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver(observerCallbackFn, options);
+
     observer.observe(ref1.current);
     observer.observe(ref2.current);
     observer.observe(ref3.current);
@@ -36,18 +39,19 @@ export default function Paragraph() {
       <div className="paragraph-inner p-8 bg-gray-50 w-full">
         <div className="mt-32">
           <div className="py-8 sm:px-1">
-            <h3 ref={ref1} className="opacity-0 text-4xl text-center mb-8">
+            <h3 ref={ref1} className="opacity-0 text-4xl text-center mb-8 translate-y-[20px] transition-all duration-500 ease-in">
               🪻
             </h3>
             <p ref={ref2} className={styles.text}>
-              &ldquo;사람의 마음으로 자기의 길을
+              &ldquo;사람이 마음으로 자기의 길을
               <br /> 계획할지라도 그의 걸음을 인도하시는 이는
               <br /> 여호와시니라&rdquo;
+              <br />
               <sub>잠언 16장 9절</sub>
             </p>
           </div>
           <div className="mt-32 py-8 space-y-2">
-            <h3 ref={ref3} className="opacity-0 text-center mb-8">
+            <h3 ref={ref3} className="opacity-0 text-center mb-8 translate-y-[20px] transition-all duration-500 ease-in">
               <span className={styles.titleEng}>invitation</span>
               <br />
               <span className={styles.title}>초대합니다</span>
@@ -69,6 +73,6 @@ export default function Paragraph() {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 }

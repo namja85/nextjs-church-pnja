@@ -1,10 +1,46 @@
-import { useState, useEffect } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import styles from '../../pages/notice/invitation.module.css';
 
 export default function Calendar() {
   const [today, setToday] = useState(new Date());
   const [target, _] = useState(new Date(2024, 8, 29)); // 2024.09.29
   const [diff, setDiff] = useState(null);
+
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
+  const ref3 = useRef(null);
+  const ref4 = useRef(null);
+  const ref5 = useRef(null);
+  const ref6 = useRef(null);
+  const ref7 = useRef(null);
+  const ref8 = useRef(null);
+
+  useEffect(() => {
+    const observerCallbackFn = (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = 1;
+          e.target.style.transform = "translateY(0)"
+        }
+      });
+    };
+    const options = {
+      root: null,
+      rootMargin: '0px 0px -200px 0px',
+      threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver(observerCallbackFn, options);
+
+    observer.observe(ref1.current);
+    observer.observe(ref2.current);
+    observer.observe(ref3.current);
+    observer.observe(ref4.current);
+    observer.observe(ref5.current);
+    observer.observe(ref6.current);
+    observer.observe(ref7.current);
+    observer.observe(ref8.current);
+  }, []);
 
   useEffect(() => {
     const diffMillisecond = target.getTime() - today.getTime();
@@ -16,15 +52,14 @@ export default function Calendar() {
     <div className={styles.calendarWrapper}>
       <div className="calendar-inner p-8 w-full">
         <div className="py-8">
-          <div className="title">
+          <div ref={ref1} className="title opacity-0 translate-y-[20px] transition-all duration-500 ease-in">
             <p className={styles.date}>2024.09.29</p>
             <p className={styles.hour}>주일 오후 2시</p>
-            <p className="bg-blue-200"></p>
           </div>
           <div className={styles.calendarContent}>
             <table cellSpacing={0} className="leading-8 w-full my-4">
               <thead>
-                <tr>
+                <tr ref={ref2} className="opacity-0 translate-y-[20px] transition-all duration-500 ease-in">
                   <th>일</th>
                   <th>월</th>
                   <th>화</th>
@@ -35,7 +70,7 @@ export default function Calendar() {
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr ref={ref3} className='opacity-0 translate-y-[20px] transition-all duration-500 ease-in'>
                   <td>
                     <span>1</span>
                   </td>
@@ -58,7 +93,7 @@ export default function Calendar() {
                     <span>7</span>
                   </td>
                 </tr>
-                <tr>
+                <tr ref={ref4} className='opacity-0 translate-y-[20px] transition-all duration-500 ease-in'>
                   <td>
                     <span>8</span>
                   </td>
@@ -81,7 +116,7 @@ export default function Calendar() {
                     <span>14</span>
                   </td>
                 </tr>
-                <tr>
+                <tr ref={ref5} className='opacity-0 translate-y-[20px] transition-all duration-500 ease-in'>
                   <td>
                     <span>15</span>
                   </td>
@@ -104,7 +139,7 @@ export default function Calendar() {
                     <span>21</span>
                   </td>
                 </tr>
-                <tr>
+                <tr ref={ref6} className='opacity-0 translate-y-[20px] transition-all duration-500 ease-in'>
                   <td>
                     <span>22</span>
                   </td>
@@ -127,7 +162,7 @@ export default function Calendar() {
                     <span>28</span>
                   </td>
                 </tr>
-                <tr>
+                <tr ref={ref7} className='opacity-0 translate-y-[20px] transition-all duration-500 ease-in'>
                   <td className="relative">
                     <div className={styles.event}>
                       <span className="text-white">29</span>
@@ -156,7 +191,7 @@ export default function Calendar() {
               </tbody>
             </table>
           </div>
-          <div>
+          <div ref={ref8} className='opacity-0 translate-y-[20px] transition-all duration-500 ease-in'>
             <p className={styles.dday}>
               임직감사예배까지 <span className={styles.pink}>{diff}일</span>{' '}
               남았습니다.
