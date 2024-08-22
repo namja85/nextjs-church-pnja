@@ -54,6 +54,9 @@ export default function Header({ darkMode, toggleDarkMode }) {
                 </div>
               </a>
             </Link>
+            <span className="event hover:scale-105">
+              <Link href="/notice/invitation">2024년도 임직감사예배</Link>
+            </span>
 
             <div className="lg:hidden">
               <button
