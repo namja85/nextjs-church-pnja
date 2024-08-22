@@ -1,4 +1,3 @@
-import Script from 'next/script';
 import BusIcon from '../BusIcon';
 import MetroIcon from '../MetroIcon';
 import CarIcon from '../CarIcon';
@@ -12,15 +11,17 @@ const church = {
 
 export default function Map() {
   useEffect(() => {
-    const map = new window.naver.maps.Map('map', {
-      center: new window.naver.maps.LatLng(church.lat, church.lng),
-      zoom: 19,
-      zoomControl: true,
-    });
-    new window.naver.maps.Marker({
-      position: new window.naver.maps.LatLng(church.lat, church.lng),
-      map,
-    });
+    if (naver?.maps?.Map) {
+      const map = new naver.maps.Map('map', {
+        center: new naver.maps.LatLng(church.lat, church.lng),
+        zoom: 19,
+        zoomControl: true,
+      });
+      new naver.maps.Marker({
+        position: new naver.maps.LatLng(church.lat, church.lng),
+        map,
+      });
+    }
   }, []);
 
   return (
