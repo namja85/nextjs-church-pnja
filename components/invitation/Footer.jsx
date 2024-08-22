@@ -1,5 +1,7 @@
 import { useRouter } from 'next/router';
 import styles from '../../pages/notice/invitation.module.css';
+import KakaotalkIcon from '../KakaotalkIcon';
+import LinkIcon from '../LinkIcon';
 
 export default function Footer() {
   const router = useRouter();
@@ -7,18 +9,9 @@ export default function Footer() {
   const openKakaotalk = () => {
     window.open('kakaotalk://');
   };
-  const copyUrlLink = () => {
-    function copyCurrentUrlToClipboard() {
-      const url = window.location.href;
-      const textArea = document.createElement('textarea');
-      textArea.value = url;
-      document.body.appendChild(textArea);
-      textArea.select();
-      document.execCommand('copy');
-      document.body.removeChild(textArea);
-    }
-
-    copyCurrentUrlToClipboard();
+  const copyUrlLink = async () => {
+    await navigator.clipboard.writeText(window.location.href);
+    alert('✉️ 초대장 링크를 복사하였습니다.');
   };
 
   const goHome = () => {
@@ -27,15 +20,22 @@ export default function Footer() {
   return (
     <div className={styles.footerWrapper}>
       <div className="footer-inner p-4 w-full">
-        <div className="my-8 space-y-4">
+        <div className="py-8 space-y-4">
           <p className={styles.text} onClick={openKakaotalk}>
-            카카오톡 공유하기
+            <span className="inline-block w-4 h-4 mr-1">
+              <KakaotalkIcon />
+            </span>
+            <span>카카오톡 공유하기</span>
           </p>
           <p className={styles.text} onClick={copyUrlLink}>
-            링크주소 복사하기
+            <span className="inline-block w-4 h-4 mr-1">
+              <LinkIcon />
+            </span>
+            <span>링크주소 복사하기</span>
           </p>
           <p className={styles.text} onClick={goHome}>
-            평내중앙교회
+            <span className="inline-block w-4 h-4 mr-1 mb-1">⛪️</span>
+            <span>평내중앙교회</span>
           </p>
         </div>
       </div>

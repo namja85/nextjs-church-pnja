@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Hero from '../../components/invitation/Hero';
 import Paragraph from '../../components/invitation/Paragraph';
+import Appointee from '../../components/invitation/Appointee';
 import Calendar from '../../components/invitation/Calendar';
 import Map from '../../components/invitation/Map';
 import Footer from '../../components/invitation/Footer';
@@ -33,6 +34,7 @@ export default function Invitation() {
       <div className="mx-auto max-w-md shadow-md">
         <Hero />
         <Paragraph />
+        <Appointee />
         <Calendar />
         <Map />
         <Footer />

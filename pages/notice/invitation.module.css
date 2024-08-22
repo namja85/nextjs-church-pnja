@@ -121,11 +121,47 @@
   font-family: 'Gowun Dodum', serif;
   color: #524548;
   text-align: center;
-  padding: 0 4rem;
+  padding: 0 1rem;
   word-wrap: break-word; /* 긴 단어는 줄을 바꿔 표현 */
   overflow-wrap: break-word; /* 표준 속성 */
   white-space: normal; /* 기본 줄 바꿈 적용 */
   word-break: keep-all; /* 단어를 깨지 않고 유지 */
+}
+
+.appointeeWrapper {
+  font-family: 'Gowun Dodum', serif;
+  background: #f6f5f5;
+}
+.appointeeWrapper .titleEng {
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #c2b2b2;
+  font-family: Crimson Pro;
+}
+.appointeeWrapper .title {
+  font-size: 1.2rem;
+}
+.appointeeWrapper .duty {
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.8rem;
+  /* letter-spacing: 3px; */
+  opacity: 0.8;
+  font-family: 'Gowun Dodum', serif;
+  color: #524548;
+  text-align: center;
+  padding: 0 4rem;
+}
+.appointeeWrapper .name {
+  font-size: 1rem;
+  line-height: 1.8rem;
+  /* letter-spacing: 3px; */
+  opacity: 0.8;
+  font-family: 'Gowun Dodum', serif;
+  color: #524548;
+  text-align: center;
+  padding: 0 4rem;
 }
 
 .mapWrapper {
@@ -199,5 +235,7 @@
 }
 .footerWrapper p {
   font-size: 0.8rem;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

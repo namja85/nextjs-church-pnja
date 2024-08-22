@@ -3,6 +3,18 @@ import Layout from '../components/Layout';
 import useDarkMode from '../hooks/useDarkMode';
 import '../styles/globals.css';
 
+function withScript(page) {
+  return (
+    <>
+      <Script
+        strategy="beforeInteractive"
+        src={`https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${process.env.NEXT_PUBLIC_MAP_KEY}`}
+      ></Script>
+      {page}
+    </>
+  );
+}
+
 function MyApp({ Component, pageProps }) {
   const [darkMode, toggleDarkMode] = useDarkMode();
 
@@ -10,15 +22,11 @@ function MyApp({ Component, pageProps }) {
     Component.getLayout ||
     ((page) => (
       <Layout darkMode={darkMode} toggleDarkMode={toggleDarkMode}>
-        <Script
-          strategy="beforeInteractive"
-          src={`https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${process.env.NEXT_PUBLIC_MAP_KEY}`}
-        ></Script>
         {page}
       </Layout>
     ));
 
-  return getLayout(<Component {...pageProps} />);
+  return getLayout(withScript(<Component {...pageProps} />));
 }
 
 export default MyApp;

@@ -4,16 +4,17 @@ export default function Paragraph() {
   return (
     <div className={styles.paragraphWrapper}>
       <div className="paragraph-inner p-8 bg-gray-50 w-full">
-        <div>
-          <div className="my-12">
+        <div className="mt-32">
+          <div className="py-8 sm:px-1">
             <h3 className="text-4xl text-center mb-8">🪻</h3>
             <p className={styles.text}>
-              &ldquo;사람의 마음으로 자기의 길을 계획할지라도 그의 걸음을
-              인도하시는 이는 여호와시니라&rdquo;
+              &ldquo;사람의 마음으로 자기의 길을
+              <br /> 계획할지라도 그의 걸음을 인도하시는 이는
+              <br /> 여호와시니라&rdquo;
               <sub>잠언 16장 9절</sub>
             </p>
           </div>
-          <div className="my-12 space-y-2 mt-32">
+          <div className="py-8 space-y-2">
             <h3 className="text-center mb-8">
               <span className={styles.titleEng}>invitation</span>
               <br />
