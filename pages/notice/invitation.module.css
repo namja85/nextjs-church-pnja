@@ -121,7 +121,7 @@
   font-family: 'Gowun Dodum', serif;
   color: #524548;
   text-align: center;
-  padding: 0 1rem;
+  /* padding: 0 1rem; */
   word-wrap: break-word; /* 긴 단어는 줄을 바꿔 표현 */
   overflow-wrap: break-word; /* 표준 속성 */
   white-space: normal; /* 기본 줄 바꿈 적용 */
@@ -151,7 +151,7 @@
   font-family: 'Gowun Dodum', serif;
   color: #524548;
   text-align: center;
-  padding: 0 4rem;
+  /* padding: 0 4rem; */
 }
 .appointeeWrapper .name {
   font-size: 1rem;
@@ -161,7 +161,7 @@
   font-family: 'Gowun Dodum', serif;
   color: #524548;
   text-align: center;
-  padding: 0 4rem;
+  /* padding: 0 4rem; */
 }
 
 .mapWrapper {
