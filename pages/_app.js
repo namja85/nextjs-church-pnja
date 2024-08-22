@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Script from 'next/script';
 import Layout from '../components/Layout';
 import useDarkMode from '../hooks/useDarkMode';
@@ -21,9 +22,24 @@ function MyApp({ Component, pageProps }) {
   const getLayout =
     Component.getLayout ||
     ((page) => (
-      <Layout darkMode={darkMode} toggleDarkMode={toggleDarkMode}>
-        {page}
-      </Layout>
+      <>
+        <Head>
+          <meta property="og:type" content="website"></meta>
+          <meta property="og:title" content="평내중앙교회"></meta>
+          <meta
+            property="og:description"
+            content="평내중앙교회에 오신 것을 환영합니다."
+          ></meta>
+          <meta
+            property="og:image"
+            content="https://www.pnja.or.kr/thumbnail.png"
+          ></meta>
+          <meta property="og:url" content="https://www.pnja.or.kr"></meta>
+        </Head>
+        <Layout darkMode={darkMode} toggleDarkMode={toggleDarkMode}>
+          {page}
+        </Layout>
+      </>
     ));
 
   return getLayout(withScript(<Component {...pageProps} />));
