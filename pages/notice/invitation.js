@@ -16,14 +16,17 @@ export default function Invitation() {
           content="2024년도 평내중앙교회 임직감사예배에 초대합니다."
         />
         <meta property="og:type" content="website"></meta>
-        <meta property="og:title" content="임직감사예배 초대장✉️"></meta>
+        <meta
+          property="og:title"
+          content="💌평내중앙교회 초대장이 왔어요."
+        ></meta>
         <meta
           property="og:description"
-          content="2024.09.29 오전 11시 평내중앙교회 3층 본당"
+          content="임직감사예배에 당신을 초대합니다."
         ></meta>
         <meta
           property="og:image"
-          content="https://www.pnja.or.kr/thumbnail.png"
+          content="https://www.pnja.or.kr/invitation.jpg"
         ></meta>
         <meta
           property="og:url"

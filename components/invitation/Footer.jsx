@@ -11,7 +11,7 @@ export default function Footer() {
   };
   const copyUrlLink = async () => {
     await navigator.clipboard.writeText(window.location.href);
-    alert('✉️ 초대장 링크를 복사하였습니다.');
+    alert('💌초대장 링크를 복사하였습니다.');
   };
 
   const goHome = () => {
