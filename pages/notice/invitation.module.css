@@ -68,6 +68,10 @@
   background: #f6f5f5;
 }
 
+.heroWrapper .show {
+  opacity: 1;
+}
+
 .heroWrapper .title {
   position: absolute;
   top: 0;
