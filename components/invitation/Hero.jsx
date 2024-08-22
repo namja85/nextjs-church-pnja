@@ -9,7 +9,6 @@ export default function Hero() {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((e) => {
-        console.log(e);
         if (e.isIntersecting) {
           headerRef.current.style.opacity = 0;
         } else {
@@ -24,7 +23,7 @@ export default function Hero() {
     <div className={styles.heroWrapper}>
       <div
         ref={headerRef}
-        className="opacity-0 transition ease-out fixed h-4 text-xs z-20 w-full text-center border-b shadow-sm bg-gray-100"
+        className="opacity-0 fixed h-4 text-xs font-bold z-20 w-full text-center border-b shadow-md bg-gray-200 text-gray-600"
       >
         2024년도 임직감사예배 - 평내중앙교회
       </div>
