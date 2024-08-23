@@ -35,9 +35,19 @@ export default function Hero() {
           2024년도 임직감사예배 - 평내중앙교회
         </div>
       )}
-      <div className="hero-inner p-8 relative bg-gray-50 w-full h-[800px]">
+      <div className="hero-inner p-8 relative bg-gray-50 w-full h-[650px]">
         <div className="absolute top-0 left-0 w-full h-full p-4 z-20">
-          <div className={styles.borderTop}></div>
+          <div className={styles.borderTop}>
+            <div className="mt-7 text-center">
+              <Image
+                src={'/church-logo.png'}
+                alt={'평내중앙교회 교단 로고'}
+                width={24}
+                height={24}
+                priority
+              />
+            </div>
+          </div>
           <div className={styles.borderBottom}>
             <p className={styles.text} onClick={goHome}>
               <span className="inline-block w-4 h-4 mr-1 mb-1">⛪️</span>
@@ -53,7 +63,7 @@ export default function Hero() {
           </div>
         </div>
         <Image
-          src={'/church-light.jpg'}
+          src={'/church.jpg'}
           alt={'평내중앙교회 건물'}
           layout="fill"
           objectFit="cover"
