@@ -6,11 +6,15 @@ import LinkIcon from '../LinkIcon';
 export default function Footer() {
   const router = useRouter();
 
-  const openKakaotalk = () => {
+  const copyUrltoClipboard = async () => {
+    await navigator.clipboard.writeText(window.location.href);
+  };
+  const openKakaotalk = async () => {
+    await copyUrltoClipboard();
     window.open('kakaotalk://');
   };
   const copyUrlLink = async () => {
-    await navigator.clipboard.writeText(window.location.href);
+    await copyUrltoClipboard();
     alert('💌초대장 링크를 복사하였습니다.');
   };
 
