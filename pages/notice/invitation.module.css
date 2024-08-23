@@ -143,7 +143,9 @@
   text-align: center;
 }
 .heroWrapper .text {
+  font-size: 0.8rem;
   text-align: center;
+  cursor: pointer;
 }
 
 .paragraphWrapper {
@@ -308,4 +310,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
