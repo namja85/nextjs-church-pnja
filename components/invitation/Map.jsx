@@ -84,9 +84,9 @@ export default function Map() {
           </div>
           <div
             ref={ref4}
-            className="border border-[#e8dfdf] rounded-md opacity-0 translate-y-[20px] transition-all duration-500 ease-in"
+            className="my-8 border border-[#e8dfdf] opacity-0 translate-y-[20px] transition-all duration-500 ease-in"
           >
-            <div id="map" className="my-8 w-full h-96 lg:h-[35rem]"></div>
+            <div id="map" className="w-full h-96 lg:h-[35rem]"></div>
           </div>
           <div className="divide-y divide-[#e9e5e]">
             <div
