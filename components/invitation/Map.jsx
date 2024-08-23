@@ -23,14 +23,14 @@ export default function Map() {
       entries.forEach((e) => {
         if (e.isIntersecting) {
           e.target.style.opacity = 1;
-          e.target.style.transform = "translateY(0)"
+          e.target.style.transform = 'translateY(0)';
         }
       });
     };
     const options = {
       root: null,
       rootMargin: '0px 0px -200px 0px',
-      threshold: 0.5,
+      threshold: 0,
     };
 
     const observer = new IntersectionObserver(observerCallbackFn, options);
@@ -62,22 +62,37 @@ export default function Map() {
     <div className={styles.mapWrapper}>
       <div className="map-inner p-8 bg-gray-50 w-full">
         <div className="py-8 space-y-2">
-          <h3 ref={ref1} className="text-center mb-8 opacity-0 translate-y-[20px] transition-all duration-500 ease-in">
+          <h3
+            ref={ref1}
+            className="text-center mb-8 opacity-0 translate-y-[20px] transition-all duration-500 ease-in"
+          >
             <span className={styles.titleEng}>location</span>
             <br />
             <span className={styles.title}>오시는 길</span>
           </h3>
-          <div ref={ref2} className="opacity-0 translate-y-[20px] transition-all duration-500 ease-in">
+          <div
+            ref={ref2}
+            className="opacity-0 translate-y-[20px] transition-all duration-500 ease-in"
+          >
             <p className={styles.text}>평내중앙교회 3층 본당</p>
           </div>
-          <div ref={ref3} className="opacity-0 translate-y-[20px] transition-all duration-500 ease-in">
+          <div
+            ref={ref3}
+            className="opacity-0 translate-y-[20px] transition-all duration-500 ease-in"
+          >
             <p className={styles.text}>경기 남양주시 평내로29번길 51-30</p>
           </div>
-          <div ref={ref4} className="opacity-0 translate-y-[20px] transition-all duration-500 ease-in">
+          <div
+            ref={ref4}
+            className="border border-[#e8dfdf] rounded-md opacity-0 translate-y-[20px] transition-all duration-500 ease-in"
+          >
             <div id="map" className="my-8 w-full h-96 lg:h-[35rem]"></div>
           </div>
           <div className="divide-y divide-[#e9e5e]">
-            <div ref={ref5} className="flex py-8 opacity-0 translate-y-[20px] transition-all duration-500 ease-in">
+            <div
+              ref={ref5}
+              className="flex py-8 opacity-0 translate-y-[20px] transition-all duration-500 ease-in"
+            >
               <div className="mr-4">
                 <div className={styles.iconCircle}>
                   <BusIcon />
@@ -94,7 +109,10 @@ export default function Map() {
                 </p>
               </div>
             </div>
-            <div ref={ref6} className="flex py-8 opacity-0 translate-y-[20px] transition-all duration-500 ease-in">
+            <div
+              ref={ref6}
+              className="flex py-8 opacity-0 translate-y-[20px] transition-all duration-500 ease-in"
+            >
               <div className="mr-4">
                 <div className={styles.iconCircle}>
                   <MetroIcon />
@@ -105,7 +123,10 @@ export default function Map() {
                 <p className={styles.trafficContent}>경춘선 평내호평역 하차</p>
               </div>
             </div>
-            <div ref={ref7} className="flex py-8 opacity-0 translate-y-[20px] transition-all duration-500 ease-in">
+            <div
+              ref={ref7}
+              className="flex py-8 opacity-0 translate-y-[20px] transition-all duration-500 ease-in"
+            >
               <div className="mr-4">
                 <div className={styles.iconCircle}>
                   <CarIcon />
