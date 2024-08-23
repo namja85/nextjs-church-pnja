@@ -78,7 +78,7 @@
   border-image: linear-gradient(
     180deg,
     hsla(0, 0%, 80%, 0.7) 85%,
-    hsla(0, 0%, 65%, 0.8)
+    hsla(0, 0%, 65%, 0.3)
   );
   border-image-slice: 1;
   /* box-shadow: 0 0 7px rgb(0 0 0 / 4%); */
