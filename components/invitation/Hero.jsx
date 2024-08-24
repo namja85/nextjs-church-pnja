@@ -35,7 +35,7 @@ export default function Hero() {
           2024년도 임직감사예배 - 평내중앙교회
         </div>
       )}
-      <div className="hero-inner p-8 relative bg-gray-50 w-full h-[650px]">
+      <div className="hero-inner p-8 relative bg-gray-50 w-full h-[680px]">
         <div className="absolute top-0 left-0 w-full h-full p-4 z-20">
           <div className={styles.borderTop}>
             <div className="mt-7 text-center">
