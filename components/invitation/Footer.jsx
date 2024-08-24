@@ -19,7 +19,7 @@ export default function Footer() {
     alert('💌초대장 링크를 복사하였습니다.');
   };
   const makeCall = async () => {
-    window.location.href = 'tel:+820315593428';
+    window.location.href = 'tel:0315957373';
   };
 
   const goHome = () => {
