@@ -27,10 +27,10 @@ export default function Footer() {
       Kakao.Share.sendDefault({
         objectType: 'feed',
         content: {
-          title: '💌평내중앙교회 초대장이 왔어요.',
+          title: '⛪️평내중앙교회 초대장이 왔어요.',
           description:
-            '2024년도 임직감사예배에 초대합니다. 2024.09.29 주일 오후2시',
-          imageUrl: 'https://pnja/or.kr/share-thumbnail.jpg',
+            '2024년도 임직감사예배에 초대합니다.\n2024.09.29 주일 오후2시',
+          imageUrl: 'https://pnja.or.kr/share-thumbnail.jpg',
           link: {
             mobileWebUrl: 'https://pnja.or.kr/notice/invitation',
             webUrl: 'https://pnja.or.kr/notice/invitation',
