@@ -28,7 +28,7 @@ export default function Footer() {
         objectType: 'feed',
         content: {
           title: '2024년도 임직감사예배에 초대합니다.',
-          description: '2024.9.29 주일 오후2시\n평내중앙교회 3층 본당',
+          description: '2024.09.29 주일 오후2시\n평내중앙교회 3층 본당',
           imageUrl: 'https://pnja.or.kr/share-thumbnail.jpg',
           imageWidth: 600,
           imageHeight: 938,
