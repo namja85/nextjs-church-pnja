@@ -1,18 +1,66 @@
+import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import styles from '../../pages/notice/invitation.module.css';
 import KakaotalkIcon from '../KakaotalkIcon';
 import LinkIcon from '../LinkIcon';
 import CallIcon from '../CallIcon';
 
+const KAKAOTALK_APP_PRIVATE_KEY = '76c2fffa54d098a656142debad14f3eb';
+
 export default function Footer() {
   const router = useRouter();
+
+  useEffect(() => {
+    if (!Kakao.isInitialized()) {
+      Kakao.init(KAKAOTALK_APP_PRIVATE_KEY);
+    }
+  }, []);
 
   const copyUrltoClipboard = async () => {
     await navigator.clipboard.writeText(window.location.href);
   };
   const openKakaotalk = async () => {
-    await copyUrltoClipboard();
-    window.open('kakaotalk://');
+    // await copyUrltoClipboard();
+    // window.open('kakaotalk://');
+
+    function shareMessage() {
+      Kakao.Share.sendDefault({
+        objectType: 'feed',
+        content: {
+          title: '딸기 치즈 케익',
+          description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
+          imageUrl:
+            'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+          link: {
+            // [내 애플리케이션] > [플랫폼] 에서 등록한 사이트 도메인과 일치해야 함
+            mobileWebUrl: 'https://developers.kakao.com',
+            webUrl: 'https://developers.kakao.com',
+          },
+        },
+        social: {
+          likeCount: 286,
+          commentCount: 45,
+          sharedCount: 845,
+        },
+        buttons: [
+          {
+            title: '웹으로 보기',
+            link: {
+              mobileWebUrl: 'https://developers.kakao.com',
+              webUrl: 'https://developers.kakao.com',
+            },
+          },
+          {
+            title: '앱으로 보기',
+            link: {
+              mobileWebUrl: 'https://developers.kakao.com',
+              webUrl: 'https://developers.kakao.com',
+            },
+          },
+        ],
+      });
+    }
+    shareMessage();
   };
   const copyUrlLink = async () => {
     await copyUrltoClipboard();
