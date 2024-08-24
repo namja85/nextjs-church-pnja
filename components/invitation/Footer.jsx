@@ -27,8 +27,8 @@ export default function Footer() {
       Kakao.Share.sendDefault({
         objectType: 'feed',
         content: {
-          title: '2024년도 임직감사예배에 초대합니다.',
-          description: '⛪️ 평내중앙교회\n📅 2024.9.29 주일 오후2시',
+          title: '⛪️ 2024년도 임직감사예배에 초대합니다.',
+          description: '평내중앙교회 3층 본당\n2024.9.29 주일 오후2시',
           imageUrl: 'https://pnja.or.kr/share-thumbnail.jpg',
           imageWidth: 600,
           imageHeight: 938,
