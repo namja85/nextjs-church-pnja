@@ -27,33 +27,20 @@ export default function Footer() {
       Kakao.Share.sendDefault({
         objectType: 'feed',
         content: {
-          title: '딸기 치즈 케익',
-          description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
-          imageUrl:
-            'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+          title: '💌평내중앙교회 초대장이 왔어요.',
+          description:
+            '2024년도 임직감사예배에 초대합니다. 2024.09.29 주일 오후2시',
+          imageUrl: 'https://pnja/or.kr/share-thumbnail.jpg',
           link: {
-            // [내 애플리케이션] > [플랫폼] 에서 등록한 사이트 도메인과 일치해야 함
-            mobileWebUrl: 'https://developers.kakao.com',
-            webUrl: 'https://developers.kakao.com',
+            mobileWebUrl: 'https://pnja.or.kr/notice/invitation',
+            webUrl: 'https://pnja.or.kr/notice/invitation',
           },
-        },
-        social: {
-          likeCount: 286,
-          commentCount: 45,
-          sharedCount: 845,
         },
         buttons: [
           {
-            title: '웹으로 보기',
+            title: '💌초대장',
             link: {
-              mobileWebUrl: 'https://developers.kakao.com',
-              webUrl: 'https://developers.kakao.com',
-            },
-          },
-          {
-            title: '앱으로 보기',
-            link: {
-              mobileWebUrl: 'https://developers.kakao.com',
+              mobileWebUrl: 'https://pnja.or.kr/notice/invitation',
               webUrl: 'https://developers.kakao.com',
             },
           },
