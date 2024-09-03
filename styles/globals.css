@@ -2,37 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'NanumMyeongjo';
-  font-weight: 200;
-  src: url('/fonts/NanumMyeongjo.ttf') format('truetype');
-}
+/* hero text */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
 
-@font-face {
-  font-family: 'SOYOMapleBoldTTF';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/SOYOMapleBoldTTF.woff2')
-    format('woff2');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  /* font-family: 'GowunDodum-Regular'; */
-  font-family: 'Gowun Dodum';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff')
-    format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
+/* event title */
 @font-face {
   font-family: 'Puradak';
   src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.1/PuradakGentleGothicR.woff2')
     format('woff2');
-  font-weight: normal;
-  font-style: normal;
+  font-display: 'swap';
 }
 
+/* event ko text */
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+/* event en text */
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
 .dark .event {
@@ -44,6 +27,7 @@
   font-weight: 600;
   -webkit-text-fill-color: transparent;
 }
+
 .event {
   background: linear-gradient(174deg, #3857ff, #fba8ff 80%);
   -webkit-background-clip: text;

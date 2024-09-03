@@ -26,18 +26,11 @@ export default function Hero() {
   };
 
   return (
-    <div className={styles.heroWrapper}>
-      {false && (
-        <div
-          ref={headerRef}
-          className="opacity-0 fixed h-4 text-xs font-bold z-20 w-full text-center border-b shadow-md bg-gray-200 text-gray-600"
-        >
-          2024년도 임직감사예배 - 평내중앙교회
-        </div>
-      )}
-      <div className="hero-inner p-8 relative bg-gray-50 w-full h-[680px]">
+    <div className="hero-wrapper">
+      {false && <div ref={headerRef}>2024년도 임직감사예배 - 평내중앙교회</div>}
+      <div className="p-8 relative bg-gray-50 w-full h-[680px]">
         <div className="absolute top-0 left-0 w-full h-full p-4 z-20">
-          <div className={styles.borderTop}>
+          <div className="border w-full h-[650px] border-[#fff] border-b-0 box-border">
             <div className="mt-7 text-center">
               <Image
                 src={'/church-logo.png'}
@@ -48,18 +41,30 @@ export default function Hero() {
               />
             </div>
           </div>
-          <div className={styles.borderBottom}>
-            <p className={styles.text} onClick={goHome}>
+          <div className="inline-block px-[28px] py-0 border border-[hsla(0,0%,71%,0.7)]">
+            <p
+              className="text-[0.8rem] text-[#524548] text-center cursor-pointer hover:scale-105 active:scale-105"
+              onClick={goHome}
+            >
               <span className="inline-block w-4 h-4 mr-1 mb-1">⛪️</span>
               <span>평내중앙교회</span>
             </p>
           </div>
         </div>
-        <div ref={titleRef} className={styles.title}>
-          <h1>임직감사예배</h1>
-          <div>
-            <p>2024.09.29 주일 오후 2시</p>
-            <p>평내중앙교회 3층 본당</p>
+        <div
+          ref={titleRef}
+          className="absolute top-0 left-1/2 w-full -translate-x-1/2 translate-y-[100px] z-10"
+        >
+          <h1 className="font-puradak text-[2.5rem] leading-[1.8rem] tracking-[5px] text-[#524548] text-center mb-[3rem]">
+            임직감사예배
+          </h1>
+          <div className="mt-[2rem] px-[2rem] py-0">
+            <p className="text-[1rem] font-[800] leading-[1.8rem] tracking-[3px] text-[#524548] text-center">
+              2024.09.29 주일 오후 2시
+            </p>
+            <p className="text-[1rem] font-[800] leading-[1.8rem] tracking-[3px] text-[#524548] text-center">
+              평내중앙교회 3층 본당
+            </p>
           </div>
         </div>
         <Image

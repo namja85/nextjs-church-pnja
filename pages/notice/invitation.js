@@ -8,7 +8,7 @@ import Footer from '../../components/invitation/Footer';
 
 export default function Invitation() {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto font-dodum bg-[#f6f5f5]">
       <Head>
         <title>임직감사예배 | 평내중앙교회</title>
         <meta

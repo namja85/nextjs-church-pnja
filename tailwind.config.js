@@ -8,8 +8,10 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      'myeongjo': ['NanumMyeongjo'],
-      'main': ['SOYOMapleBoldTTF']
+      'hero': ['Nanum Gothic'],
+      'puradak': ['Puradak'],
+      'dodum': ['Gowun Dodum'],
+      'crimson': ['Crimson Pro']
     }
   },
   plugins: [require('@tailwindcss/typography')],
