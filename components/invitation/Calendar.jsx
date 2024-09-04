@@ -1,5 +1,4 @@
 import { useRef, useState, useEffect } from 'react';
-import styles from '../../pages/notice/invitation.module.css';
 
 export default function Calendar() {
   const [today, setToday] = useState(new Date());
@@ -49,24 +48,31 @@ export default function Calendar() {
   }, [today, target]);
 
   return (
-    <div className={styles.calendarWrapper}>
-      <div className="calendar-inner p-8 w-full">
+    <div className="calendar-wrapper">
+      <div className="p-8 w-full">
         <div className="py-8">
           <div
             ref={ref1}
             className="title opacity-0 translate-y-[20px] transition-all duration-500 ease-in"
           >
-            <p className={styles.date}>2024.09.29</p>
-            <p className={styles.hour}>주일 오후 2시</p>
+            <p className="text-[1.4rem] leading-[1.8rem] tracking-[3px] opacity-80 font-crimson text-[#524548] text-center">
+              2024.09.29
+            </p>
+            <p className="text-[0.9rem] tracking-[1px] text-[#524548] text-center mb-5">
+              주일 오후 2시
+            </p>
           </div>
-          <div className={styles.calendarContent}>
-            <table cellSpacing={0} className="leading-8 w-full my-4">
+          <div className="border border-[#e8dfdf] border-l-0 border-r-0 px-4 py-0">
+            <table
+              cellSpacing={0}
+              className="text-center leading-8 w-full my-4"
+            >
               <thead>
                 <tr
                   ref={ref2}
                   className="opacity-0 translate-y-[20px] transition-all duration-500 ease-in"
                 >
-                  <th>일</th>
+                  <th className="text-[#c6472b]">일</th>
                   <th>월</th>
                   <th>화</th>
                   <th>수</th>
@@ -80,7 +86,7 @@ export default function Calendar() {
                   ref={ref3}
                   className="opacity-0 translate-y-[20px] transition-all duration-500 ease-in"
                 >
-                  <td>
+                  <td className="text-[#c6472b]">
                     <span>1</span>
                   </td>
                   <td>
@@ -106,7 +112,7 @@ export default function Calendar() {
                   ref={ref4}
                   className="opacity-0 translate-y-[20px] transition-all duration-500 ease-in"
                 >
-                  <td>
+                  <td className="text-[#c6472b]">
                     <span>8</span>
                   </td>
                   <td>
@@ -132,7 +138,7 @@ export default function Calendar() {
                   ref={ref5}
                   className="opacity-0 translate-y-[20px] transition-all duration-500 ease-in"
                 >
-                  <td>
+                  <td className="text-[#c6472b]">
                     <span>15</span>
                   </td>
                   <td>
@@ -158,7 +164,7 @@ export default function Calendar() {
                   ref={ref6}
                   className="opacity-0 translate-y-[20px] transition-all duration-500 ease-in"
                 >
-                  <td>
+                  <td className="text-[#c6472b]">
                     <span>22</span>
                   </td>
                   <td>
@@ -185,8 +191,10 @@ export default function Calendar() {
                   className="opacity-0 translate-y-[20px] transition-all duration-500 ease-in"
                 >
                   <td className="relative">
-                    <div className={styles.event}>
-                      <span className="text-white">29</span>
+                    <div className="absolute w-full h-full flex justify-center items-center">
+                      <span className="text-white flex justify-center items-center w-[30px] h-[30px] rounded-full bg-[#cec3c3]">
+                        29
+                      </span>
                     </div>
                     <span>29</span>
                   </td>
@@ -216,8 +224,8 @@ export default function Calendar() {
             ref={ref8}
             className="opacity-0 translate-y-[20px] transition-all duration-500 ease-in"
           >
-            <p className={styles.dday}>
-              임직감사예배까지 <span className={styles.pink}>{diff}일</span>{' '}
+            <p className="text-[0.9rem] tracking-[1px] text-[#524548] text-center mt-5">
+              임직감사예배까지 <span className="text-[#c6472b]">{diff}일</span>{' '}
               남았습니다.
             </p>
           </div>

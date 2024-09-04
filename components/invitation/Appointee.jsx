@@ -1,5 +1,6 @@
 import { useRef, useEffect } from 'react';
-import styles from '../../pages/notice/invitation.module.css';
+import SectionTitle from './SectionTitle';
+import AppointeeName from './AppoiteeName';
 
 export default function Appointee() {
   const ref1 = useRef(null);
@@ -33,48 +34,29 @@ export default function Appointee() {
   }, []);
 
   return (
-    <div className={styles.appointeeWrapper}>
-      <div className="appointee-inner p-8 bg-gray-50 w-full">
+    <div className="appointee-wrapper">
+      <div className="p-8 bg-gray-50 w-full">
         <div className="py-8">
           <div className="space-y-2">
-            <h3
-              ref={ref1}
-              className="text-center mb-8 opacity-0 translate-y-[20px] transition-all duration-500 ease-in"
-            >
-              <span className={styles.titleEng}>appointees</span>
-              <br />
-              <span className={styles.title}>임직자</span>
-            </h3>
+            <SectionTitle ref={ref1} koTitle="임직자" enTitle="appointees" />
 
             <div className="space-y-4">
-              <div
-                ref={ref2}
-                className="opacity-0 translate-y-[20px] transition-all duration-500 ease-in"
-              >
-                <h4 className={styles.duty}>명예장로</h4>
-                <p className={styles.name}>최준호</p>
-              </div>
-              <div
+              <AppointeeName ref={ref2} duty="명예장로" names={['최준호']} />
+              <AppointeeName
                 ref={ref3}
-                className="opacity-0 translate-y-[20px] transition-all duration-500 ease-in"
-              >
-                <h4 className={styles.duty}>명예안수집사</h4>
-                <p className={styles.name}>임시철</p>
-              </div>
-              <div
+                duty="명예안수집사"
+                names={['임시철']}
+              />
+              <AppointeeName
                 ref={ref4}
-                className="opacity-0 translate-y-[20px] transition-all duration-500 ease-in"
-              >
-                <h4 className={styles.duty}>안수집사</h4>
-                <p className={styles.name}>김남길 현경은</p>
-              </div>
-              <div
+                duty="안수집사"
+                names={['김남길', '현경은']}
+              />
+              <AppointeeName
                 ref={ref5}
-                className="opacity-0 translate-y-[20px] transition-all duration-500 ease-in"
-              >
-                <h4 className={styles.duty}>권사</h4>
-                <p className={styles.name}>김소정 강명옥 김은선 이윤미</p>
-              </div>
+                duty="권사"
+                names={['김소정', '강명옥', '김은선', '이윤미']}
+              />
             </div>
           </div>
         </div>

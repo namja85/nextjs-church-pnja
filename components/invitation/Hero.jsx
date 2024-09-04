@@ -1,25 +1,11 @@
 import { useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import styles from '../../pages/notice/invitation.module.css';
 
 export default function Hero() {
   const router = useRouter();
   const titleRef = useRef(null);
   const headerRef = useRef(null);
-
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver((entries) => {
-  //     entries.forEach((e) => {
-  //       if (e.isIntersecting) {
-  //         headerRef.current.style.opacity = 0;
-  //       } else {
-  //         headerRef.current.style.opacity = 1;
-  //       }
-  //     });
-  //   });
-  //   observer.observe(titleRef.current);
-  // }, []);
 
   const goHome = () => {
     router.push('/');
@@ -30,7 +16,7 @@ export default function Hero() {
       {false && <div ref={headerRef}>2024년도 임직감사예배 - 평내중앙교회</div>}
       <div className="p-8 relative bg-gray-50 w-full h-[680px]">
         <div className="absolute top-0 left-0 w-full h-full p-4 z-20">
-          <div className="border w-full h-[650px] border-[#fff] border-b-0 box-border">
+          <div className="border w-full h-[650px] border-[#fff] border-top border-b-0 box-border">
             <div className="mt-7 text-center">
               <Image
                 src={'/church-logo.png'}
@@ -41,7 +27,7 @@ export default function Hero() {
               />
             </div>
           </div>
-          <div className="inline-block px-[28px] py-0 border border-[hsla(0,0%,71%,0.7)]">
+          <div className="px-0 py-[28px] border border-t-0 border-bottom border-[hsla(0,0%,71%,0.7)]">
             <p
               className="text-[0.8rem] text-[#524548] text-center cursor-pointer hover:scale-105 active:scale-105"
               onClick={goHome}
@@ -58,7 +44,7 @@ export default function Hero() {
           <h1 className="font-puradak text-[2.5rem] leading-[1.8rem] tracking-[5px] text-[#524548] text-center mb-[3rem]">
             임직감사예배
           </h1>
-          <div className="mt-[2rem] px-[2rem] py-0">
+          <div className="mt-[2rem] px-0 py-[2rem]">
             <p className="text-[1rem] font-[800] leading-[1.8rem] tracking-[3px] text-[#524548] text-center">
               2024.09.29 주일 오후 2시
             </p>
