@@ -1,9 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /* hero text */
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap'); */
 
 /* event title */
 @font-face {
@@ -14,9 +10,13 @@
 }
 
 /* event ko text */
-@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap'); */
 /* event en text */
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap'); */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer components {
   .border-top {
@@ -35,24 +35,4 @@
     );
     border-image-slice: 1;
   }
-}
-
-.dark .event {
-  background: linear-gradient(174deg, #d857ff, #fba8ff 80%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  display: block;
-  font-size: 1.2rem;
-  font-weight: 600;
-  -webkit-text-fill-color: transparent;
-}
-
-.event {
-  background: linear-gradient(174deg, #3857ff, #fba8ff 80%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  display: block;
-  font-size: 1.2rem;
-  font-weight: 600;
-  -webkit-text-fill-color: transparent;
 }
