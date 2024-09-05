@@ -1,23 +1,27 @@
 import Head from 'next/head';
 import Script from 'next/script';
-
-const church = {
-  lat: 37.647,
-  lng: 127.23511,
-};
+import useChurch from '../hooks/useChurch';
 
 export default function WayToCome() {
+  const { church } = useChurch();
+
   const handleScriptOnReady = () => {
     const map = new naver.maps.Map('map', {
-      center: new naver.maps.LatLng(church.lat, church.lng),
+      center: new naver.maps.LatLng(
+        church.location.latitude,
+        church.location.longitude,
+      ),
       zoom: 19,
       zoomControl: true,
     });
     new naver.maps.Marker({
-      position: new naver.maps.LatLng(church.lat, church.lng),
+      position: new naver.maps.LatLng(
+        church.location.latitude,
+        church.location.longitude,
+      ),
       map,
     });
-  }
+  };
 
   return (
     <div className="container p-4">
@@ -33,9 +37,11 @@ export default function WayToCome() {
 
       <div className="mt-8">
         <h1 className="text-3xl font-bold tracking-wide my-8 flex items-center">
-          평내중앙교회
+          {church.name}
         </h1>
-        <p className="mb-2">(12223) 경기도 남양주시 평내로29번길 51-30</p>
+        <p className="mb-2">
+          ({church.zipCode}) {church.address}
+        </p>
         <div className="rounded-2xl border border-slate-900/5 overflow-hidden dark:border-sky-600 shadow dark:shadow-slate-800">
           <div id="map" className="w-full h-96 lg:h-[35rem]"></div>
         </div>
@@ -57,8 +63,8 @@ export default function WayToCome() {
                 <span className="font-bold">좌석</span>: 330-1
               </p>
               <p className="ml-4 relative before:absolute before:content-['-'] before:-left-3">
-                <span className="font-bold">직행</span>: 1200, 1200-1,
-                1330-2, 1330-3, 1330-4, 1330-44
+                <span className="font-bold">직행</span>: 1200, 1200-1, 1330-2,
+                1330-3, 1330-4, 1330-44
               </p>
               <p className="ml-4 relative before:absolute before:content-['-'] before:-left-3">
                 <span className="font-bold">정거장</span>: 평내동주민센터,

@@ -3,8 +3,10 @@ import { useRouter } from 'next/router';
 import KakaotalkIcon from '../KakaotalkIcon';
 import LinkIcon from '../LinkIcon';
 import CallIcon from '../CallIcon';
+import useChurch from '../../hooks/useChurch';
 
 export default function Footer() {
+  const { church } = useChurch();
   const router = useRouter();
 
   const copyUrltoClipboard = async () => {
@@ -46,7 +48,7 @@ export default function Footer() {
     alert('💌초대장 링크를 복사하였습니다.');
   };
   const makeCall = async () => {
-    window.location.href = 'tel:0315957373';
+    window.location.href = `tel:${church.phone}`;
   };
 
   const goHome = () => {
