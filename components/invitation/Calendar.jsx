@@ -48,7 +48,7 @@ export default function Calendar() {
   }, [today, target]);
 
   return (
-    <div className="calendar-wrapper">
+    <div className="calendar-wrapper bg-[#f6f5f5]">
       <div className="p-8 w-full">
         <div className="py-8">
           <div
