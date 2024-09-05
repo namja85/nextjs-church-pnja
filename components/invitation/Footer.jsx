@@ -4,14 +4,12 @@ import KakaotalkIcon from '../KakaotalkIcon';
 import LinkIcon from '../LinkIcon';
 import CallIcon from '../CallIcon';
 
-const KAKAOTALK_APP_PRIVATE_KEY = '76c2fffa54d098a656142debad14f3eb';
-
 export default function Footer() {
   const router = useRouter();
 
   useEffect(() => {
     if (!Kakao.isInitialized()) {
-      Kakao.init(KAKAOTALK_APP_PRIVATE_KEY);
+      Kakao.init(process.env.KAKAOTALK_APP_PRIVATE_KEY);
     }
   }, []);
 
