@@ -9,7 +9,7 @@ export default function Footer() {
 
   useEffect(() => {
     if (!Kakao.isInitialized()) {
-      Kakao.init(process.env.KAKAOTALK_APP_PRIVATE_KEY);
+      Kakao.init(process.env.NEXT_PUBLIC_KAKAOTALK_APP_KEY);
     }
   }, []);
 
