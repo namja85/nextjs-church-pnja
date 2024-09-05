@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { useEffect } from 'react';
+import Script from 'next/script';
 
 const church = {
   lat: 37.647,
@@ -7,7 +7,7 @@ const church = {
 };
 
 export default function WayToCome() {
-  useEffect(() => {
+  const handleScriptOnReady = () => {
     const map = new naver.maps.Map('map', {
       center: new naver.maps.LatLng(church.lat, church.lng),
       zoom: 19,
@@ -17,13 +17,19 @@ export default function WayToCome() {
       position: new naver.maps.LatLng(church.lat, church.lng),
       map,
     });
-  }, []);
+  }
 
   return (
     <div className="container p-4">
       <Head>
         <title>오시는 길 | 평내중앙교회</title>
       </Head>
+
+      <Script
+        strategy="lazyOnload"
+        src={`https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${process.env.NEXT_PUBLIC_MAP_KEY}`}
+        onReady={handleScriptOnReady}
+      ></Script>
 
       <div className="mt-8">
         <h1 className="text-3xl font-bold tracking-wide my-8 flex items-center">

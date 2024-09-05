@@ -56,8 +56,10 @@ export default function Hero() {
         <Image
           src={'/church.jpg'}
           alt={'평내중앙교회 건물'}
-          layout="fill"
-          objectFit="cover"
+          style={{
+            objectFit: 'cover',
+          }}
+          fill
           priority
         />
       </div>
