@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
 
-const AppointeeName = forwardRef(function ({ duty, names }, ref) {
+const AppointeeName = forwardRef(function AppointeeName({ duty, names }, ref) {
   return (
     <div
       ref={ref}

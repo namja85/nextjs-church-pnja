@@ -1,6 +1,9 @@
 import { forwardRef } from 'react';
 
-const SectionParagraph = forwardRef(function ({ children }, ref) {
+const SectionParagraph = forwardRef(function SectionParagraph(
+  { children },
+  ref,
+) {
   return (
     <p
       ref={ref}

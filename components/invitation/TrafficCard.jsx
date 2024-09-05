@@ -1,6 +1,9 @@
 import { forwardRef } from 'react';
 
-const TrafficCard = forwardRef(function ({ children, icon, name }, ref) {
+const TrafficCard = forwardRef(function TrafficCard(
+  { children, icon, name },
+  ref,
+) {
   return (
     <div
       ref={ref}

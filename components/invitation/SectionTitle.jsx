@@ -1,6 +1,9 @@
 import { forwardRef } from 'react';
 
-const SectionTitle = forwardRef(function ({ koTitle, enTitle }, ref) {
+const SectionTitle = forwardRef(function SectionTitle(
+  { koTitle, enTitle },
+  ref,
+) {
   return (
     <h3
       ref={ref}
