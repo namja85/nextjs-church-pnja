@@ -1,3 +1,5 @@
+'use client';
+
 import Script from 'next/script';
 import BusIcon from '../BusIcon';
 import MetroIcon from '../MetroIcon';
@@ -5,11 +7,10 @@ import CarIcon from '../CarIcon';
 import SectionTitle from './SectionTitle';
 import SectionParagraph from './SectionParagraph';
 import TrafficCard from './TrafficCard';
-import useChurch from '../../hooks/useChurch';
 import useElevateEffect from '../../hooks/useElevateEffect';
+import { church } from '@/utils/church';
 
 export default function Map() {
-  const { church } = useChurch();
   const { setRef } = useElevateEffect();
 
   const handleScriptOnLoad = () => {

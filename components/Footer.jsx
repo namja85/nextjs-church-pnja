@@ -1,11 +1,9 @@
 import Image from 'next/image';
 import MailIcon from './MailIcon';
 import LocationIcon from './LocationIcon';
-import useChurch from '../hooks/useChurch';
+import { church } from '@/utils/church';
 
 export default function Footer() {
-  const { church } = useChurch();
-
   return (
     <footer className="border-t border-slate-50/[0.06] py-10 px-4">
       <div className="p-4 max-w-lg mx-auto flex justify-between items-start md:max-w-3xl lg:max-w-5xl">

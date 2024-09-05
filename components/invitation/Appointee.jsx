@@ -1,3 +1,5 @@
+'use client';
+
 import SectionTitle from './SectionTitle';
 import AppointeeName from './AppoiteeName';
 import useElevateEffect from '../../hooks/useElevateEffect';

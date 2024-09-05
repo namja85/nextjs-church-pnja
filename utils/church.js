@@ -39,6 +39,4 @@ class MyChurch {
   }
 }
 
-export default function useChurch() {
-  return { church: new MyChurch() };
-}
+export const church = new MyChurch();

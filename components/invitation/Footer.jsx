@@ -1,12 +1,13 @@
+'use client';
+
 import Script from 'next/script';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import KakaotalkIcon from '../KakaotalkIcon';
 import LinkIcon from '../LinkIcon';
 import CallIcon from '../CallIcon';
-import useChurch from '../../hooks/useChurch';
+import { church } from '@/utils/church';
 
 export default function Footer() {
-  const { church } = useChurch();
   const router = useRouter();
 
   const copyUrltoClipboard = async () => {

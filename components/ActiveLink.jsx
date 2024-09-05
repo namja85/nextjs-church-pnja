@@ -1,10 +1,12 @@
+'use client';
+
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 import cn from 'classnames';
 
 export default function ActiveLink({ children, href }) {
-  const router = useRouter();
-  const active = router.asPath === href;
+  const pathname = usePathname();
+  const active = pathname === href;
 
   return (
     <Link href={href}>

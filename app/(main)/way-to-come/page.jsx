@@ -1,10 +1,10 @@
-import Head from 'next/head';
+'use client';
+
 import Script from 'next/script';
-import useChurch from '../hooks/useChurch';
+import { church } from '@/utils/church';
+import Head from 'next/head';
 
 export default function WayToCome() {
-  const { church } = useChurch();
-
   const handleScriptOnLoad = () => {
     const map = new naver.maps.Map('map', {
       center: new naver.maps.LatLng(
@@ -27,8 +27,11 @@ export default function WayToCome() {
     <div className="container p-4">
       <Head>
         <title>오시는 길 | 평내중앙교회</title>
+        <meta
+          name="description"
+          content="평내중앙교회로 오시는 길을 안내합니다."
+        />
       </Head>
-
       <Script
         strategy="lazyOnload"
         src={`https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${process.env.NEXT_PUBLIC_MAP_KEY}`}
