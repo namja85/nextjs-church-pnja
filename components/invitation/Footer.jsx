@@ -55,7 +55,7 @@ export default function Footer() {
     router.push('/');
   };
 
-  const handleScriptOnReady = () => {
+  const handleScriptOnLoad = () => {
     if (!Kakao.isInitialized()) {
       Kakao.init(process.env.NEXT_PUBLIC_KAKAOTALK_APP_KEY);
     }
@@ -68,7 +68,7 @@ export default function Footer() {
         src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js"
         integrity="sha384-TiCUE00h649CAMonG018J2ujOgDKW/kVWlChEuu4jK2vxfAAD0eZxzCKakxg55G4"
         crossOrigin="anonymous"
-        onReady={handleScriptOnReady}
+        onLoad={handleScriptOnLoad}
       ></Script>
 
       <div className="footer-wrapper bg-[#f2eeee] text-[#434343]">

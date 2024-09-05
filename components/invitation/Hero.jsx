@@ -1,11 +1,8 @@
-import { useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 
 export default function Hero() {
   const router = useRouter();
-  const titleRef = useRef(null);
-  const headerRef = useRef(null);
 
   const goHome = () => {
     router.push('/');
@@ -13,7 +10,6 @@ export default function Hero() {
 
   return (
     <div className="hero-wrapper">
-      {false && <div ref={headerRef}>2024년도 임직감사예배 - 평내중앙교회</div>}
       <div className="p-8 relative bg-gray-50 w-full h-[680px]">
         <div className="absolute top-0 left-0 w-full h-full p-4 z-20">
           <div className="border w-full h-[650px] border-[#fff] border-top border-b-0 box-border">
@@ -37,10 +33,7 @@ export default function Hero() {
             </p>
           </div>
         </div>
-        <div
-          ref={titleRef}
-          className="absolute top-0 left-1/2 w-full -translate-x-1/2 translate-y-[100px] z-10"
-        >
+        <div className="absolute top-0 left-1/2 w-full -translate-x-1/2 translate-y-[100px] z-10">
           <h1 className="font-puradak text-[2.5rem] leading-[1.8rem] tracking-[5px] text-[#524548] text-center mb-[3rem]">
             임직감사예배
           </h1>

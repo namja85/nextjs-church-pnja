@@ -5,7 +5,7 @@ import useChurch from '../hooks/useChurch';
 export default function WayToCome() {
   const { church } = useChurch();
 
-  const handleScriptOnReady = () => {
+  const handleScriptOnLoad = () => {
     const map = new naver.maps.Map('map', {
       center: new naver.maps.LatLng(
         church.location.latitude,
@@ -32,7 +32,7 @@ export default function WayToCome() {
       <Script
         strategy="lazyOnload"
         src={`https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${process.env.NEXT_PUBLIC_MAP_KEY}`}
-        onReady={handleScriptOnReady}
+        onLoad={handleScriptOnLoad}
       ></Script>
 
       <div className="mt-8">
