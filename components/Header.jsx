@@ -42,21 +42,21 @@ export default function Header({ darkMode, toggleDarkMode }) {
         <div className="max-w-lg mx-auto md:max-w-3xl lg:max-w-5xl">
           <div className="mx-4 py-4 flex justify-between items-center">
             <Link className="cursor-pointer" href={'/'}>
-              <a>
-                <div className="relative w-32 aspect-[2/1]">
-                  <Image
-                    src="/logo.png"
-                    alt="평내중앙교회로고"
-                    layout="fill"
-                    objectFit="contain"
-                    priority
-                  />
-                </div>
-              </a>
+              <div className="relative w-32 aspect-[2/1]">
+                <Image
+                  src="/logo.png"
+                  alt="평내중앙교회로고"
+                  style={{
+                    objectFit: 'contain',
+                  }}
+                  fill
+                  priority
+                />
+              </div>
             </Link>
 
             <Link href="/notice/invitation">
-              <span className="font-[1.2rem] font-[600] bg-[linear-gradient(174deg,#3857ff,#fba8ff_80%)] dark:bg-[linear-gradient(174deg,#d857ff,#fba8ff_80%)] text-transparent bg-clip-text cursor-pointer hover:scale-105">
+              <span className="text-[1.2rem] font-[600] bg-[linear-gradient(174deg,#3857ff,#fba8ff_80%)] dark:bg-[linear-gradient(174deg,#d857ff,#fba8ff_80%)] text-transparent bg-clip-text cursor-pointer hover:scale-105">
                 2024년도 임직감사예배
               </span>
             </Link>
@@ -125,8 +125,11 @@ export default function Header({ darkMode, toggleDarkMode }) {
                   <Image
                     src="/logo.png"
                     alt="평내중앙교회로고"
-                    layout="fill"
-                    objectFit="contain"
+                    style={{
+                      objectFit: 'contain',
+                    }}
+                    fill
+                    priority
                   />
                 </div>
               </div>

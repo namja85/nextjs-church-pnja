@@ -37,17 +37,15 @@ export default function WorshipContentBox({ worship }) {
           const [name, content] = worship.차례[key];
           return false && key === '성경봉독' && content ? (
             <Link key={key} href={`/bibles/${parseToPath(content)}`}>
-              <a>
-                <p className="flex justify-between hover:font-bold hover:text-slate-300">
-                  <span className="flex-1 text-center tracking-widest">
-                    {key}
-                  </span>
-                  <span className="flex-[2] text-center">{content}</span>
-                  <span className="flex-1 text-center tracking-widest">
-                    {name}
-                  </span>
-                </p>
-              </a>
+              <p className="flex justify-between hover:font-bold hover:text-slate-300">
+                <span className="flex-1 text-center tracking-widest">
+                  {key}
+                </span>
+                <span className="flex-[2] text-center">{content}</span>
+                <span className="flex-1 text-center tracking-widest">
+                  {name}
+                </span>
+              </p>
             </Link>
           ) : (
             <p key={key} className="flex justify-between">

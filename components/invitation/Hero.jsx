@@ -17,7 +17,7 @@ export default function Hero() {
       <div className="p-8 relative bg-gray-50 w-full h-[680px]">
         <div className="absolute top-0 left-0 w-full h-full p-4 z-20">
           <div className="border w-full h-[650px] border-[#fff] border-top border-b-0 box-border">
-            <div className="mt-7 text-center">
+            <div className="mt-7 flex justify-center">
               <Image
                 src={'/church-logo.png'}
                 alt={'평내중앙교회 교단 로고'}

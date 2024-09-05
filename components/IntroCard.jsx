@@ -11,8 +11,10 @@ export default function IntroCard({ name, imgPath, text, bibleNum }) {
           <Image
             src={imgPath}
             alt={name}
-            layout="fill"
-            objectFit="fill"
+            style={{
+              objectFit: 'fill',
+            }}
+            fill
             priority
           />
         </div>

@@ -17,16 +17,18 @@ export default function Footer() {
               <a href="mailto:info@pnja.or.kr">info@pnja.or.kr</a>
             </small>
           </p>
-          <p className='mt-4'>
+          <p className="mt-4">
             <small>Copyright © 2024 평내중앙교회. All rights reserved.</small>
           </p>
         </div>
         <div className="relative w-28 aspect-[2/1]">
           <Image
             src="/logo.png"
-            layout="fill"
-            objectFit="contain"
             alt="평내중앙교회로고"
+            style={{
+              objectFit: 'contain',
+            }}
+            fill
           />
         </div>
       </div>

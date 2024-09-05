@@ -31,7 +31,7 @@ export default function BulletinCard({ id, content }) {
 
   return (
     <Link href={`/bulletins/${id}`}>
-      <a className="flex justify-center">
+      <div className="flex justify-center">
         <div className="border w-80 border-slate-900/5 dark:border-0 dark:ring-1 rounded-2xl shadow place-self-center overflow-hidden">
           <div className="relative h-48 w-full overflow-hidden">
             <Image
@@ -63,7 +63,7 @@ export default function BulletinCard({ id, content }) {
             </div>
           </div>
         </div>
-      </a>
+      </div>
     </Link>
   );
 }
