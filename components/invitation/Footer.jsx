@@ -1,10 +1,10 @@
 'use client';
 
-import Script from 'next/script';
 import { useRouter } from 'next/navigation';
 import KakaotalkIcon from '../KakaotalkIcon';
 import LinkIcon from '../LinkIcon';
 import CallIcon from '../CallIcon';
+import WithKakaotalkScript from '../WithKakaotalkScript';
 import { church } from '@/utils/church';
 
 export default function Footer() {
@@ -56,22 +56,8 @@ export default function Footer() {
     router.push('/');
   };
 
-  const handleScriptOnLoad = () => {
-    if (!Kakao.isInitialized()) {
-      Kakao.init(process.env.NEXT_PUBLIC_KAKAOTALK_APP_KEY);
-    }
-  };
-
   return (
-    <>
-      <Script
-        strategy="lazyOnload"
-        src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js"
-        integrity="sha384-TiCUE00h649CAMonG018J2ujOgDKW/kVWlChEuu4jK2vxfAAD0eZxzCKakxg55G4"
-        crossOrigin="anonymous"
-        onLoad={handleScriptOnLoad}
-      ></Script>
-
+    <WithKakaotalkScript>
       <div className="footer-wrapper bg-[#f2eeee] text-[#434343]">
         <div className="footer-inner p-4 w-full">
           <div className="py-8 space-y-4">
@@ -112,6 +98,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </>
+    </WithKakaotalkScript>
   );
 }

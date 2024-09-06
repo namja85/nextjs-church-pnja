@@ -35,3 +35,5 @@ yarn-error.log*
 
 /public/robots.txt
 /public/sitemap*.xml
+/app/robots.txt
+/app/sitemap*.xml

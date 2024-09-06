@@ -8,6 +8,10 @@ import BookIcon from '@/components/BookIcon';
 export const metadata = {
   title: '평내중앙교회',
   description: '평내중앙교회는 여러분을 환영합니다.',
+  openGraph: {
+    type: 'website',
+    url: 'https://pnja.or.kr',
+  },
 };
 
 export default function Home() {

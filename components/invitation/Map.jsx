@@ -1,44 +1,20 @@
 'use client';
 
-import Script from 'next/script';
 import BusIcon from '../BusIcon';
 import MetroIcon from '../MetroIcon';
 import CarIcon from '../CarIcon';
 import SectionTitle from './SectionTitle';
 import SectionParagraph from './SectionParagraph';
 import TrafficCard from './TrafficCard';
+import WithNaverMapScript from '../WithNaverMapScript';
 import useElevateEffect from '../../hooks/useElevateEffect';
 import { church } from '@/utils/church';
 
 export default function Map() {
   const { setRef } = useElevateEffect();
 
-  const handleScriptOnLoad = () => {
-    const map = new naver.maps.Map('map', {
-      center: new naver.maps.LatLng(
-        church.location.latitude,
-        church.location.longitude,
-      ),
-      zoom: 19,
-      zoomControl: true,
-    });
-    new naver.maps.Marker({
-      position: new naver.maps.LatLng(
-        church.location.latitude,
-        church.location.longitude,
-      ),
-      map,
-    });
-  };
-
   return (
-    <>
-      <Script
-        strategy="lazyOnload"
-        src={`https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${process.env.NEXT_PUBLIC_MAP_KEY}`}
-        onLoad={handleScriptOnLoad}
-      ></Script>
-
+    <WithNaverMapScript>
       <div className="map-wrapper">
         <div className="p-8 bg-gray-50 w-full">
           <div className="py-8 space-y-2">
@@ -72,6 +48,6 @@ export default function Map() {
           </div>
         </div>
       </div>
-    </>
+    </WithNaverMapScript>
   );
 }
