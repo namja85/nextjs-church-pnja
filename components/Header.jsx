@@ -58,7 +58,7 @@ export default function Header({ darkMode, toggleDarkMode }) {
             </Link>
 
             <Link href="/notice/invitation">
-              <span className="text-[1.2rem] font-[600] bg-[linear-gradient(174deg,#3857ff,#fba8ff_80%)] dark:bg-[linear-gradient(174deg,#d857ff,#fba8ff_80%)] text-transparent bg-clip-text cursor-pointer hover:scale-105">
+              <span className="text-sm md:text-lg font-[600] bg-[linear-gradient(174deg,#3857ff,#fba8ff_80%)] dark:bg-[linear-gradient(174deg,#d857ff,#fba8ff_80%)] text-transparent bg-clip-text cursor-pointer hover:scale-105">
                 2024년도 임직감사예배
               </span>
             </Link>

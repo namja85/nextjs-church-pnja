@@ -11,13 +11,13 @@ export default function Hello() {
           인사말
         </h1>
         <hr />
-        <h2 className="text-center text-xl font-bold">
+        <h2 className="text-center text-md md:text-lg font-bold">
           &quot;세계선교를 통한 인재양성, 금융권을 통한 선교, 학원가를 통한
           선교!&quot;
         </h2>
       </div>
 
-      <div className="text-lg px-4 sm:px-0 my-16 flex flex-col justify-center text-center space-y-4">
+      <div className="text-sm md:text-lg px-4 sm:px-0 my-16 flex flex-col justify-center text-center space-y-4">
         <p>예수 그리스도의 이름으로 여러분을 환영합니다.</p>
         <p>
           &quot;평내중앙교회&quot;는 지역의 복음화를 위한 다음세대를 준비하기

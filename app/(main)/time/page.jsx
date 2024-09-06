@@ -11,14 +11,14 @@ export default function Hello() {
           예배시간안내
         </h1>
         <hr />
-        <h2 className="text-center text-md">
+        <h2 className="text-center text-md md:text-lg">
           <span className="font-bold mr-2">요4:23</span>아버지께 참되게 예배하는
           자들은 영과 진리로 예배할 때가 오나니 곧 이 때라 아버지께서는 자기에게
           이렇게 예배하는 자들을 찾으시느니라
         </h2>
       </div>
 
-      <div className="my-16 flex flex-col items-center">
+      <div className="text-sm md:text-lg my-16 flex flex-col items-center">
         <table className="w-full table-auto border-collapse border-t-2 border-b-2 border-slate-500">
           <thead>
             <tr className="bg-gray-200">

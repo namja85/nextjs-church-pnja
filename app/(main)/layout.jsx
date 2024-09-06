@@ -57,7 +57,7 @@ export default function RootLayout({ children }) {
         ></link>
       </head>
       <body className="antialiased text-slate-500 dark:text-slate-400 bg-slate-50 dark:bg-slate-900">
-        <div className="min-h-screen min-w-[430px]">
+        <div className="min-h-screen">
           <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
           <Main>{children}</Main>
           <Footer />
