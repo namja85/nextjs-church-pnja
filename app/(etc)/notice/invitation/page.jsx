@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Hero from '@/components/invitation/Hero';
 import Paragraph from '@/components/invitation/Paragraph';
 import Appointee from '@/components/invitation/Appointee';
@@ -14,26 +13,6 @@ export const metadata = {
 export default function Invitation() {
   return (
     <div className="container mx-auto font-dodum">
-      <Head>
-        <meta property="og:type" content="website"></meta>
-        <meta
-          property="og:title"
-          content="💌평내중앙교회 초대장이 왔어요."
-        ></meta>
-        <meta
-          property="og:description"
-          content="임직감사예배에 당신을 초대합니다."
-        ></meta>
-        <meta
-          property="og:image"
-          content="https://www.pnja.or.kr/invitation.jpg"
-        ></meta>
-        <meta
-          property="og:url"
-          content="https://www.pnja.or.kr/notice/invitation"
-        ></meta>
-      </Head>
-
       <div className="mx-auto max-w-md shadow-md">
         <Hero />
         <Paragraph />

@@ -43,6 +43,18 @@ export default function RootLayout({ children }) {
         <meta name="msapplication-TileColor" content="#2b5797"></meta>
         <meta name="theme-color" content="#373737"></meta>
 
+        <meta property="og:type" content="website"></meta>
+        <meta property="og:title" content="평내중앙교회"></meta>
+        <meta
+          property="og:description"
+          content="평내중앙교회에 오신 것을 환영합니다."
+        ></meta>
+        <meta
+          property="og:image"
+          content="https://www.pnja.or.kr/thumbnail.png"
+        ></meta>
+        <meta property="og:url" content="https://www.pnja.or.kr"></meta>
+
         <link
           href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap"
           rel="stylesheet"
