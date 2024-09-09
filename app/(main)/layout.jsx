@@ -5,6 +5,14 @@ import Main from '@/components/Main';
 import Footer from '@/components/Footer';
 import useDarkMode from '@/hooks/useDarkMode';
 import '@/styles/globals.css';
+import { Nanum_Gothic } from 'next/font/google';
+
+const nanum_gothic = Nanum_Gothic({
+  subsets: ['latin'],
+  weight: '800',
+  display: 'swap',
+  variable: '--font-nanum-gothic',
+});
 
 export default function RootLayout({ children }) {
   const [darkMode, toggleDarkMode] = useDarkMode();
@@ -24,21 +32,11 @@ export default function RootLayout({ children }) {
         ></link>
         <meta name="msapplication-TileColor" content="#2b5797"></meta>
         <meta name="theme-color" content="#373737"></meta>
-
-        <link
-          href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap"
-          rel="stylesheet"
-        ></link>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap"
-          rel="stylesheet"
-        ></link>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap"
-          rel="stylesheet"
-        ></link>
       </head>
-      <body className="antialiased text-slate-500 dark:text-slate-400 bg-slate-50 dark:bg-slate-900">
+
+      <body
+        className={`antialiased text-slate-500 dark:text-slate-400 bg-slate-50 dark:bg-slate-900 ${nanum_gothic.variable}`}
+      >
         <div className="min-h-screen">
           <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
           <Main>{children}</Main>

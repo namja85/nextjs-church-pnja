@@ -9,11 +9,11 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      'hero': ['Nanum Gothic'],
-      'puradak': ['Puradak'],
-      'dodum': ['Gowun Dodum'],
-      'crimson': ['Crimson Pro']
-    }
+      hero: ['var(--font-nanum-gothic)'],
+      puradak: ['var(--font-puradak)'],
+      dodum: ['var(--font-gowun-dodum)'],
+      crimson: ['var(--font-crimson-pro)'],
+    },
   },
   plugins: [require('@tailwindcss/typography')],
 };
