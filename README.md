@@ -1,34 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# [평내중앙교회 홈페이지](https://pnja.or.kr)
 
-## Getting Started
+- 배포 URL: https://pnja.or.kr
 
-First, run the development server:
+## 프로젝트 동기
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- 제가 섬기는 교회의 홈페이지 제작에 대한 필요성을 개인적으로 느끼고 있을 때, 개인 프로젝트로써 개발 함.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 프로젝트 설명
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### 종속성
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+1. Next.js
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+   - v12롤 기반으로 프로젝트 생성 개발 -> v14로 업그레이드. (pages router -> app router로 변경)
 
-## Learn More
+2. tailindcss
 
-To learn more about Next.js, take a look at the following resources:
+   - utility class를 바탕으로 개발 스트림라인 전환 없이 속도감 있게 스타일링 적용.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Naver Map & Kakakotalk API
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   - 평내중앙교회 소재지에 대한 지도 표시와 교회행사 초대장 카카오톡 공유하기 기능 적용
 
-## Deploy on Vercel
+### 기능
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. 성경보기 (상업적 x)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   - 스크래핑을 통해 성경의 모든 구절을 장 단위로 .md 파일 생성 후 각 ssg 혹은 ssr로 구성.
+   - [스크래핑 프로젝트: https://github.com/namja85/scraping-bible](https://github.com/namja85/scraping-bible)
+   - 성경 참조: http://www.holybible.or.kr
+
+2. 주보보기 (현재 비활성화)
+
+   - 매주 주보를 보여주고 주보내의 성경구절(ex 창1:1-10)을 해당 page(ex 창세기 1장)로 navigation.
+
+3. 인사말
+4. 예배시간안내
+5. 오시는 길
+6. [교회행사 모바일 초대장](https://www.pnja.or.kr/notice/invitation)
+
+### 기타
+
+1. SEO
+   - 구글, 네이버, 다음 3개의 검색엔진에서 `평내중앙교회` 검색 시 페이지 상단 표시 달성.
+
+## 배포
+
+- vercel을 통한 호스팅
