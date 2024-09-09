@@ -1,27 +1,18 @@
-import Head from 'next/head';
-import { useState } from 'react';
-import Link from 'next/link';
-import ArrowRightIcon from '../../components/ArrowRightIcon';
-import { getBiblesData } from '../../libs/bibles';
+'use client';
 
-export default function BibleList({ biblesData }) {
+import Link from 'next/link';
+import { useState } from 'react';
+import ArrowRightIcon from './ArrowRightIcon';
+
+export default function BibleList({ bibleList, biblesData }) {
   const [filterSelect, setFilterSelect] = useState('');
-  const bibleList = [
-    '전체',
-    ...new Set(biblesData.map(({ korean }) => korean.replace(/\s\d+장$/, ''))),
-  ];
 
   function onChange(e) {
     setFilterSelect(e.target.value);
   }
 
   return (
-    <div className="container flex flex-col space-y-8 p-4">
-      <Head>
-        <title>성경 | 평내중앙교회</title>
-        <meta name="description" content="구약, 신약 성경 정보를 제공합니다." />
-      </Head>
-
+    <>
       <div>
         <select
           className="form-select appearance-none block w-full px-3 py-1.5 text-base font-normal dark:text-slate-300 dark:bg-slate-700 bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-slate-700 focus:bg-slate-50 focus:border-blue-300 dark:focus:text-slate-300 dark:focus:bg-slate-700 dark:focus:border-blue-600 focus:outline-none"
@@ -48,16 +39,6 @@ export default function BibleList({ biblesData }) {
             </div>
           </Link>
         ))}
-    </div>
+    </>
   );
-}
-
-export async function getStaticProps() {
-  const biblesData = getBiblesData();
-  return {
-    // props: {
-    //   biblesData,
-    // },
-    notFound: true
-  };
 }

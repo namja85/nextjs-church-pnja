@@ -33,6 +33,11 @@ export function getBibleIds() {
 export async function getBibleContent(id) {
   const fileName = `${id}.md`;
   const fullPath = path.join(biblesDirectory, fileName);
+
+  if (!fs.existsSync(fullPath)) {
+    return null;
+  }
+
   const fileContent = fs.readFileSync(fullPath, 'utf-8');
   const matterResult = matter(fileContent);
   const processedContent = await remark()
