@@ -1,27 +1,27 @@
-import Head from 'next/head';
 import { format } from 'date-fns';
 import { ko } from 'date-fns/locale';
-import ExternalLinkIcon from '../../components/ExternalLinkIcon';
-import WorshipContentBox from '../../components/WorshipContentBox';
-import { getBulletinIds, getBulletins } from '../../libs/bulletins';
+import ExternalLinkIcon from '@/components/ExternalLinkIcon';
+import WorshipContentBox from '@/components/WorshipContentBox';
+import { getBulletins } from '@/libs/bulletins';
 
-export default function Bulletin({ id, content }) {
+export async function generateMetadata({ params: { id } }) {
+  return {
+    title: `주보 - ${Math.floor(id / 100)}년 ${id % 100}주차 | 평내중앙교회`,
+    description: `평내중앙교회의 ${Math.floor(id / 100) + 2000}년 ${
+      id % 100
+    }주차 주보 정보입니다.`,
+  };
+}
+
+export default function Bulletin({ params: { id } }) {
+  const bulletin = getBulletins().find(
+    ({ id: bulletinId }) => bulletinId === id,
+  );
+  const content = JSON.parse(bulletin.content);
   const { main, praise, wed, imageUrl } = content.default;
 
   return (
     <div className="container p-4">
-      <Head>
-        <title>
-          주보 - {Math.floor(id / 100)}년 {id % 100}주차 | 평내중앙교회
-        </title>
-        <meta
-          name="description"
-          content={`평내중앙교회의 ${Math.floor(id / 100) + 2000}년 ${
-            id % 100
-          }주차 주보 정보입니다.`}
-        />
-      </Head>
-
       <div className="space-y-4">
         <h1 className="text-slate-900 dark:text-slate-200 text-3xl font-bold tracking-wide my-8">
           주보
@@ -55,24 +55,4 @@ export default function Bulletin({ id, content }) {
       </div>
     </div>
   );
-}
-
-export async function getStaticPaths() {
-  const bulletinIds = getBulletinIds();
-
-  return {
-    paths: bulletinIds.map((id) => ({ params: { id } })),
-    fallback: false,
-  };
-}
-
-export async function getStaticProps({ params }) {
-  const bulletin = getBulletins().find(({ id }) => id === params.id);
-
-  return {
-    props: {
-      id: bulletin.id,
-      content: JSON.parse(bulletin.content),
-    },
-  };
 }
