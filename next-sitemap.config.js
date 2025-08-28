@@ -2,7 +2,7 @@
 const config = {
   siteUrl: process.env.SITE_URL || 'https://example.com',
   generateRobotsTxt: true,
-  outDir: 'app',
+  outDir: 'public',
 };
 
 module.exports = config;
